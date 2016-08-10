@@ -52,30 +52,52 @@
 ;; cian, y luego de color amarillo.
 ;;
 ;;
+;; RETO INICIAL
 ;;
-;; RETOS
+;;    1. Pintar un píxel rojo
 ;;
-;;    1. Pinta los 4 primeros píxeles de rojo a la vez
-;;    2. Ahora los 4 píxeles de color amarillo y cian
-;;    3. Pinta los 4 primeros píxeles uno de cada color 
+;; RETOS BASE
+;;
+;;    2. Pintar el píxel rojo en las 4 primeras posiciones de pantalla
+;;    3. Igual que el reto 1, pero en amarillo y cian
+;;    4. Los 4 primeros píxeles a la vez de un mismo color
+;;    5. Los 4 primeros píxeles uno de cada color 
 ;;       (fondo, amarillo, cian y rojo)
-;;    4. Amplía el programa para que pinte los 8 primeros píxeles
-;;       (4 rojos y 4 amarillos)
 ;;
-;; RETOS CREATIVOS
+;; RETOS PLUS
 ;;
-;;    1. Amplía el programa para que pinte los 16 primeros píxeles
+;;    6. Amplía el programa para que pinte los 8 primeros píxeles
+;;    7. Amplía el programa para que pinte los 16 primeros píxeles
 ;;       formando una bandera
-;;       
+;;
+;; CREATIVIDAD
+;;
+;;    8. Pintar píxeles en distintas partes de la memoria de vídeo
+;;    9. Intentar realizar dibujos pintando píxeles
+;;
+;;
+;;
+;; INTRODUCCIÓN AL NIVEL
+;;
+;;    * Objetivo: Pintar un sprite en código máquina
+;;    * Aprender:
+;;        - Funcionamiento interno del ordenador a nivel básico
+;;        - Introducción a la programación en código máquina
+;;        - ¿Por qué binario y hexadecimal?
+;;        - Píxeles y memoria de vídeo
+;;    * Recordar:
+;;        - El objetivo es resolver los retos. 
+;;        - Es posible de muchas formas, y no importa cómo se haga.
+;;        - Aprender probando: experimentar, tanto si sale bien como mal.
 ;;
 ;;
 ;; EXPLICACIONES EN ESTE VÍDEO
 ;;
 ;;    * Abrir WinAPE, introducir código y ejecutar
-;;    * Depurar código paso a paso (instrucción por instrucción)
 ;;
 ;; EXPLICACIONES EN OTROS VÍDEOS
 ;;
+;;    * Depurar código paso a paso (instrucción por instrucción)
 ;;    * Entendiendo binario y hexadecimal
 ;;    * Ciclo de ejecución del procesador
 ;;    * Instrucciones LOAD (LD), registros y memoria
