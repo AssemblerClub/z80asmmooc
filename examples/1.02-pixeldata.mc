@@ -34,7 +34,7 @@
 ;;    2 - Buscar la dirección &4000 en la zona de desensamblado
 ;;    3 - [F8] Ejecutar la primera instrucción (2A 00 40  LD HL, (4020))
 ;;    4 - Observar que el registro HL vale ahora &C020
-;;    5 - [F8] Ejecutar la segunda instrucción (3A 02 40  LD  A, (4022))
+;;    5 - [F8] Ejecutar la segunda instrucción (3A 22 40  LD  A, (4022))
 ;;    6 - Observar que el registro A vale ahora &CA
 ;;    7 - Buscar la dirección &C020 en la zona de volcado de memoria
 ;;    8 - [F8] Ejecutar la tercera instrucción (77  LD (HL), A)
