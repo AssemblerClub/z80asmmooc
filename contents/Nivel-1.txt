@@ -1,0 +1,70 @@
+========================================================================
+== NIVEL 1: Código Máquina
+========================================================================
+
+RETO: 
+   - Dibujar sprites en pantalla en código máquina
+
+OBJETIVOS: 
+   - Entender el funcionamiento básico de la arquitectura Von Newmann
+   - Entender qué es la memoria y cómo se estructura
+   - Entender cómo funciona la memoria de vídeo y su relación con la pantalla
+   - Entender qué es y cómo funciona el código máquina
+   - Entender los sistemas numéricos básicos: Hexadecimal y binario
+   - Entender el cíclo básico de ejecución FETCH-DECODE-EXECUTE
+   - Programar rutinas básicas en código máquina
+
+========================================================================
+== RETOS
+========================================================================
+   - Pintar un píxel en pantalla
+   - Seleccionar colores y posiciones para los píxeles pintados en pantalla
+   - Pintar píxeles en distintas posiciones de pantalla
+   - Realizar pequeñas animaciones que muevan píxeles
+   - Copiar trozos de memoria de una zona a otra
+
+   - Detectar errores en programas?
+   - Mejorar programas?
+
+========================================================================
+== INSTRUCCIONES
+========================================================================
+   - [  3E##] : LD  A, ##
+   - [32####] : LD (####), A
+   - [21####] : LD HL, ####
+   - [11####] : LD DE, ####
+   - [  18##] : JR ##
+   - [C3####] : JP ##
+   - [    76] : HALT
+   - [  EDA0] : LDI
+
+
+========================================================================
+== SOLUCIONES BÁSICAS A LOS RETOS
+========================================================================
+
+Reto 1.1: Pintar un pixel rojo en la esquina superior izquierda
+----------------------------------------------------------------
+ : 3E 88 32 00 C0 18 FE
+ : LD A, #88 || LD (C000), A || JR -2
+
+Reto 1.2: Pintar un pixel azul en la esquina superior izquierda
+----------------------------------------------------------------
+ : 3E 08 32 00 C0 18 FE
+ : LD A, #88 || LD (C000), A || JR -2
+
+Reto 1.3: Pintar un pixel amarillo en la esquina superior izquierda
+----------------------------------------------------------------
+ : 3E 80 32 00 C0 18 FE
+ : LD A, #88 || LD (C000), A || JR -2
+
+Reto 1.3: Pintar un pixel color fondo (azul oscuro)
+----------------------------------------------------------------
+ : 3E 00 32 00 C0 18 FE
+ : LD A, #88 || LD (C000), A || JR -2
+
+Reto 1.4: Pintar un Cuadrado de 8x8 píxeles del mismo color
+----------------------------------------------------------------
+ : 3E F0 32 00 C0 32 01 C0 32 02 C0 32 00 C8 32 01 C8 32 02 C8 32 00 D0 32 01 D0 32 02 D0 32 00 D8 32 01 D8 32 02 D8 32 00 E0 32 01 E0 32 02 E0 32 00 E8 32 01 E8 32 02 E8
+ : LD A, #88 || LD (C000), A || JR -2
+
