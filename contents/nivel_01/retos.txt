@@ -44,33 +44,145 @@ OBJETIVOS:
 == SOLUCIONES BÁSICAS A LOS RETOS
 ========================================================================
 
+**** Reto 1: Pintar 1 píxel en pantalla ****
+********************************************
+
 Reto 1.1: Pintar un pixel rojo en la esquina superior izquierda
 ----------------------------------------------------------------
  
  3E 88 32 00 C0 18 FE
  
- LD A, #88 : LD (C000), A : JR -2
+ LD A, #88 : LD (C000), A : JR 0
 
-Reto 1.2: Pintar un pixel azul en la esquina superior izquierda
-----------------------------------------------------------------
+**** Reto 2: Dominar los colores del píxel ****
+***********************************************
+
+Reto 2.1: Conseguir que el primer píxel sea de color azul
+----------------------------------------------------------
  
  3E 08 32 00 C0 18 FE
  
- LD A, #88 : LD (C000), A : JR -2
+ LD A, #08 : LD (C000), A : JR 0
 
-Reto 1.3: Pintar un pixel amarillo en la esquina superior izquierda
+Reto 2.2: Conseguir que el primer píxel sea de color amarillo
 ----------------------------------------------------------------
  
  3E 80 32 00 C0 18 FE
  
- LD A, #88 : LD (C000), A : JR -2
+ LD A, #80 : LD (C000), A : JR 0
 
-Reto 1.3: Pintar un pixel color fondo (azul oscuro)
-----------------------------------------------------------------
+Reto 2.3: Conseguir "borrar" el primer píxel (pintarlo del color del fondo)
+----------------------------------------------------------------------------
  
  3E 00 32 00 C0 18 FE
  
- LD A, #88 : LD (C000), A : JR -2
+ LD A, #00 : LD (C000), A : JR 0
+
+**** Reto 3: Dominar el formato de pantalla ****
+************************************************
+
+Reto 3.1: Pintar los 4 primeros píxeles de pantalla de color rojo
+------------------------------------------------------------------
+ 
+ 3E FF 32 00 C0 18 FE
+
+ LD A, #FF : LD (C000), A : JR 0
+
+Reto 3.2: Pintar los 16 primeros píxeles: 4 rojos, 4 azules, 4 cian, 4 amarillos. (Plus: de 2 formas. Usando A y usando HL)
+--------------------------------------------------------------------
+
+ 21 FF 00 22 00 C0 21 0F F0 22 02 C0 18 FE
+ 
+ LD HL, #00FF : LD (C000), HL
+ LD HL, #0FF0 : LD (C000), HL : JR 0
+
+Reto 3.3: Pintar el patrón 3.2 pero en 8 píxeles: 2 rojos, 2 azules, 2 cian, 2 amarillos. (Plus: de 2 formas. Usando A y Usando HL)
+--------------------------------------------------------------------
+
+ 21 CC 3C 22 00 C0 18 FE
+ LD HL, #3CCC : LD (C000), HL : JR 0
+
+Reto 3.4: [Creativo] Hacer un dibujo en 1 línea (80 píxeles o más) que use los 4 colores (Tratar de combinar los píxeles de colores lo más posible)
+--------------------------------------------------------------------
+
+ 21 FF FF 22 00 C0 21 FE FE 22 02 C0 21 FC FC 22 04 C0 21 F8 F8 22 06 C0 
+ 21 F0 F0 22 08 C0 21 E1 E1 22 0A C0 21 C3 C3 22 0C C0 21 87 87 22 0E C0 
+ 21 0F 0F 22 10 C0 21 0E 0E 22 12 C0 21 0C 0C 22 14 C0 21 08 08 22 16 C0 
+ 21 00 00 22 18 C0 18 FE
+ 
+ LD HL, #FFFF : LD (C000), HL : LD HL, #FEFE : LD (C002), HL 
+ LD HL, #FCFC : LD (C004), HL : LD HL, #F8F8 : LD (C006), HL 
+ LD HL, #F0F0 : LD (C008), HL : LD HL, #E1E1 : LD (C00A), HL 
+ LD HL, #C3C3 : LD (C00C), HL : LD HL, #8787 : LD (C00E), HL 
+ LD HL, #0F0F : LD (C010), HL : LD HL, #0E0E : LD (C012), HL 
+ LD HL, #0C0C : LD (C014), HL : LD HL, #0808 : LD (C016), HL 
+ LD HL, #0000 : LD (C018), HL : JR 0
+
+**** Reto 4: Dominar la distribución de pantalla en memoria ****
+****************************************************************
+
+Reto 4.1 Pintar un cuadrado de 4x8 píxeles a franjas de colores en la esquina superior izquierda de la pantalla
+----------------------------------------------------------------
+ 
+ 3E FF 32 00 C0 3E F0 32 00 C8
+ 3E 0F 32 00 D0 3E 00 32 00 D8
+ 3E FF 32 00 E0 3E F0 32 00 E8
+ 3E 0F 32 00 F0 3E 00 32 00 F8
+ 18 FE
+
+ LD A, #FF : LD (C000), A : LD A, #F0 : LD (C800), A 
+ LD A, #0F : LD (D000), A : LD A, #00 : LD (D800), A 
+ LD A, #FF : LD (E000), A : LD A, #F0 : LD (E800), A 
+ LD A, #0F : LD (F000), A : LD A, #00 : LD (F800), A : 18 FE
+
+Reto 4.2 Pintar una cara de un dado de 8x8 píxeles en una posición 
+del centro de la pantalla
+----------------------------------------------------------------
+
+Línea 13 : 0xC3C0. Columna 20 : 0xC3E8
+
+ 21 FF FF 22 E8 C3 21 F9 F9 22 E8 CB
+ 21 FF FF 22 E8 D3 21 F9 F9 22 E8 DB
+ 21 FF FF 22 E8 E3 21 F9 F9 22 E8 EB
+ 21 FF FF 22 E8 F3 21 00 00 22 E8 FB 18 FE
+
+ LD HL, #FFFF : LD (C3E8), HL : LD HL, #F9F9 : LD (CBE8), HL
+ LD HL, #FFFF : LD (D3E8), HL : LD HL, #F9F9 : LD (DBE8), HL
+ LD HL, #FFFF : LD (E3E8), HL : LD HL, #F9F9 : LD (EBE8), HL
+ LD HL, #FFFF : LD (F3E8), HL : LD HL, #0000 : LD (FBE8), HL : JR 0
+
+
+Reto 4.3 Dibujar un marco de fotos a la izquierda en la fila 10 de pantalla ( tamaño 8x5 carácteres, 64x40 píxeles)
+-----------------------------------------------------------------------------
+ 
+ 21 F0 F0 
+ 22 D0 C2 22 D2 C2 22 D4 C2 22 D6 C2 22 D8 C2 22 DA C2 22 DC C2 22 DE C2
+ 22 D0 CA 22 D2 CA 22 D4 CA 22 D6 CA 22 D8 CA 22 DA CA 22 DC CA 22 DE CA
+ 22 D0 D2 22 D2 D2 22 D4 D2 22 D6 D2 22 D8 D2 22 DA D2 22 DC D2 22 DE D2
+ 22 D0 DA 22 D2 DA 22 D4 DA 22 D6 DA 22 D8 DA 22 DA DA 22 DC DA 22 DE DA
+ 22 D0 E2 22 D2 E2 22 D4 E2 22 D6 E2 22 D8 E2 22 DA E2 22 DC E2 22 DE E2
+ 22 D0 EA 22 D2 EA 22 D4 EA 22 D6 EA 22 D8 EA 22 DA EA 22 DC EA 22 DE EA
+ 22 D0 F2 22 D2 F2 22 D4 F2 22 D6 F2 22 D8 F2 22 DA F2 22 DC F2 22 DE F2
+ 22 D0 FA 22 D2 FA 22 D4 FA 22 D6 FA 22 D8 FA 22 DA FA 22 DC FA 22 DE FA
+ 22 10 C4 22 12 C4 22 14 C4 22 16 C4 22 18 C4 22 1A C4 22 1C C4 22 1E C4
+ 22 10 CC 22 12 CC 22 14 CC 22 16 CC 22 18 CC 22 1A CC 22 1C CC 22 1E CC
+ 22 10 D4 22 12 D4 22 14 D4 22 16 D4 22 18 D4 22 1A D4 22 1C D4 22 1E D4
+ 22 10 DC 22 12 DC 22 14 DC 22 16 DC 22 18 DC 22 1A DC 22 1C DC 22 1E DC
+ 22 10 E4 22 12 E4 22 14 E4 22 16 E4 22 18 E4 22 1A E4 22 1C E4 22 1E E4
+ 22 10 EC 22 12 EC 22 14 EC 22 16 EC 22 18 EC 22 1A EC 22 1C EC 22 1E EC
+ 22 10 F4 22 12 F4 22 14 F4 22 16 F4 22 18 F4 22 1A F4 22 1C F4 22 1E F4
+ 22 10 FC 22 12 FC 22 14 FC 22 16 FC 22 18 FC 22 1A FC 22 1C FC 22 1E FC
+ 22 20 C3 22 20 CB 22 20 D3 22 20 DB 22 20 E3 22 20 EB 22 20 F3 22 20 FB
+ 22 70 C3 22 70 CB 22 70 D3 22 70 DB 22 70 E3 22 70 EB 22 70 F3 22 70 FB
+ 22 C0 C3 22 C0 CB 22 C0 D3 22 C0 DB 22 C0 E3 22 C0 EB 22 C0 F3 22 C0 FB
+ 22 2E C3 22 2E CB 22 2E D3 22 2E DB 22 2E E3 22 2E EB 22 2E F3 22 2E FB
+ 22 7E C3 22 7E CB 22 7E D3 22 7E DB 22 7E E3 22 7E EB 22 7E F3 22 7E FB
+ 22 CE C3 22 CE CB 22 CE D3 22 CE DB 22 CE E3 22 CE EB 22 CE F3 22 CE FB
+ 18 FE
+
+****************************************************
+****************************************************
+****************************************************
 
 Reto 1.4: Pintar un Cuadrado de 8x8 píxeles del mismo color
 ----------------------------------------------------------------
@@ -94,7 +206,7 @@ Reto 1.4: Pintar un Cuadrado de 8x8 píxeles del mismo color
  LD (E800), A : LD (E801), A 
  LD (F000), A : LD (F001), A 
  LD (F800), A : LD (F801), A 
- JR -2
+ JR 0
 
 Reto 1.5: Dibujar un dado con el número 6
 ----------------------------------------------------------------
@@ -118,7 +230,7 @@ Reto 1.5: Dibujar un dado con el número 6
  LD (C800), A : LD (C801), A 
  LD (D800), A : LD (D801), A 
  LD (E800), A : LD (E801), A 
- JR -2
+ JR 0
 
 Reto 1.6: Dibujar un sprite propio de tamaño 16x16
 ----------------------------------------------------------------
@@ -157,7 +269,7 @@ Reto 1.6: Dibujar un sprite propio de tamaño 16x16
  LD HL, #0404 : LD (E850), HL : LD HL, #0202 : LD (E852), HL
  LD HL, #0404 : LD (F050), HL : LD HL, #0202 : LD (F052), HL
  LD HL, #C0C0 : LD (F850), HL : LD HL, #3030 : LD (F852), HL
- JR -2
+ JR 0
 
 
 Reto 2.1: Mover un bloque de 4x1 píxeles por la pantalla
@@ -210,4 +322,4 @@ Reto 2.2: Copiar una línea de pantalla a otra zona
  LD HL, #C050
  LD DE, #C000
  80 x LDI 
- JR -2
+ JR 0
