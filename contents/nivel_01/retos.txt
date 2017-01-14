@@ -135,24 +135,50 @@ Reto 4.1 Pintar un cuadrado de 4x8 píxeles a franjas de colores en la esquina s
  LD A, #FF : LD (E000), A : LD A, #F0 : LD (E800), A 
  LD A, #0F : LD (F000), A : LD A, #00 : LD (F800), A : 18 FE
 
-Reto 4.2 Pintar una cara de un dado de 8x8 píxeles en una posición 
-del centro de la pantalla
+Reto 4.2 Pintar un cuadrado cómo el del reto 4.1 pero de tamaño 40x8 píxeles justo debajo del mensaje "Ready" en pantalla
 ----------------------------------------------------------------
 
-Línea 13 : 0xC3C0. Columna 20 : 0xC3E8
+Línea 13 (96px 12*8): 0xC370. Columna 0-5 (0-40px, 0-10bytes): 0xC370-0xC37A
 
- 21 FF FF 22 E8 C3 21 F9 F9 22 E8 CB
- 21 FF FF 22 E8 D3 21 F9 F9 22 E8 DB
- 21 FF FF 22 E8 E3 21 F9 F9 22 E8 EB
- 21 FF FF 22 E8 F3 21 00 00 22 E8 FB 18 FE
+ 21 FF FF 
+ 22 70 C3 22 72 C3 22 74 C3 22 76 C3 22 78 C3 
+ 22 70 E3 22 72 E3 22 74 E3 22 76 E3 22 78 E3 
+ 21 F0 F0 
+ 22 70 CB 22 72 CB 22 74 CB 22 76 CB 22 78 CB 
+ 22 70 EB 22 72 EB 22 74 EB 22 76 EB 22 78 EB 
+ 21 0F 0F 
+ 22 70 D3 22 72 D3 22 74 D3 22 76 D3 22 78 D3 
+ 22 70 F3 22 72 F3 22 74 F3 22 76 F3 22 78 F3 
+ 21 00 00 
+ 22 70 DB 22 72 DB 22 74 DB 22 76 DB 22 78 DB 
+ 22 70 FB 22 72 FB 22 74 FB 22 76 FB 22 78 FB 18 FE
+ 
+ LD HL, #FFFF : LD (C370), HL : LD (C372), HL : LD (C374), HL : LD (C376), HL : LD (C378), HL 
+              : LD (E370), HL : LD (E372), HL : LD (E374), HL : LD (E376), HL : LD (E378), HL 
+ LD HL, #F0F0 : LD (CB70), HL : LD (CB72), HL : LD (CB74), HL : LD (CB76), HL : LD (CB78), HL 
+              : LD (EB70), HL : LD (EB72), HL : LD (EB74), HL : LD (EB76), HL : LD (EB78), HL 
+ LD HL, #OFOF : LD (D370), HL : LD (D372), HL : LD (D374), HL : LD (D376), HL : LD (D378), HL 
+              : LD (F370), HL : LD (F372), HL : LD (F374), HL : LD (F376), HL : LD (F378), HL 
+ LD HL, #0000 : LD (DB70), HL : LD (DB72), HL : LD (DB74), HL : LD (DB76), HL : LD (DB78), HL 
+              : LD (FB70), HL : LD (FB72), HL : LD (FB74), HL : LD (FB76), HL : LD (FB78), HL 
 
- LD HL, #FFFF : LD (C3E8), HL : LD HL, #F9F9 : LD (CBE8), HL
- LD HL, #FFFF : LD (D3E8), HL : LD HL, #F9F9 : LD (DBE8), HL
- LD HL, #FFFF : LD (E3E8), HL : LD HL, #F9F9 : LD (EBE8), HL
- LD HL, #FFFF : LD (F3E8), HL : LD HL, #0000 : LD (FBE8), HL : JR 0
+Reto 4.3 Pintar una cara de un dado de 8x8 píxeles en la posición 16x7 en caracteres (120x48 píxeles)
+----------------------------------------------------------------
+
+Línea 7 (48px 6*8): 0xC1E0. Columna 16 (120px = 15*8 = 30 bytes) : 0xC1FE 
+
+ 21 FF FF 22 FE C1 21 F9 F9 22 FE C9
+ 21 FF FF 22 FE D1 21 F9 F9 22 FE D9
+ 21 FF FF 22 FE E1 21 F9 F9 22 FE E9
+ 21 FF FF 22 FE F1 21 00 00 22 FE F9 18 FE
+
+ LD HL, #FFFF : LD (C1FE), HL : LD HL, #F9F9 : LD (C9FE), HL
+ LD HL, #FFFF : LD (D1FE), HL : LD HL, #F9F9 : LD (D9FE), HL
+ LD HL, #FFFF : LD (E1FE), HL : LD HL, #F9F9 : LD (E9FE), HL
+ LD HL, #FFFF : LD (F1FE), HL : LD HL, #0000 : LD (F9FE), HL : JR 0
 
 
-Reto 4.3 Dibujar un marco de fotos a la izquierda en la fila 10 de pantalla ( tamaño 8x5 carácteres, 64x40 píxeles)
+Reto 4.4 Dibujar un marco de fotos a la izquierda en la fila 10 de pantalla (tamaño 8x5 carácteres, 64x40 píxeles)
 -----------------------------------------------------------------------------
  
  21 F0 F0 
