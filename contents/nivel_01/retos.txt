@@ -41,7 +41,7 @@ OBJETIVOS:
 
 
 ========================================================================
-== SOLUCIONES BÁSICAS A LOS RETOS
+== ESTRUCTURA DE RETOS DEL NIVEL
 ========================================================================
 
 **** Reto 1: Pintar 1 píxel en pantalla ****
