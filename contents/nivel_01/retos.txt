@@ -44,10 +44,13 @@ OBJETIVOS:
 == ESTRUCTURA DE RETOS DEL NIVEL
 ========================================================================
 
-**** Reto 1: Pintar 1 píxel en pantalla ****
+**** Reto 1: Pintar 1 píxel en pantalla **** << Pintar píxeles por la pantalla?
 ********************************************
 
 Reto 1.1: Pintar un pixel rojo en la esquina superior izquierda
+
+??? Reto 1.2: Pintar un pixel rojo en otra posición de la pantalla
+??? Reto 1.3: Pintar varios píxeles rojos en la pantalla
 
 **** Reto 2: Dominar los colores del píxel ****
 ***********************************************
