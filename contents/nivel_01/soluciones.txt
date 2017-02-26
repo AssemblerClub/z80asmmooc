@@ -44,9 +44,9 @@ OBJETIVOS:
 == SOLUCIONES BÁSICAS A LOS RETOS
 ========================================================================
 
-********************************************
-**** Reto 1: Pintar 1 píxel en pantalla ****
-********************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 1: Pintar 1 píxel en pantalla %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Reto 1.1: Pintar un pixel rojo en la esquina superior izquierda
 ----------------------------------------------------------------
@@ -56,9 +56,9 @@ Reto 1.1: Pintar un pixel rojo en la esquina superior izquierda
  LD A, #88 : LD (C000), A : JR 0
 
 
-***********************************************
-**** Reto 2: Dominar los colores del píxel ****
-***********************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 2: Dominar los colores del píxel %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Reto 2.1: Conseguir que el primer píxel sea de color azul
 ----------------------------------------------------------
@@ -81,9 +81,9 @@ Reto 2.3: Conseguir "borrar" el primer píxel (pintarlo del color del fondo)
  
  LD A, #00 : LD (C000), A : JR 0
 
-************************************************
-**** Reto 3: Pintar píxeles por la pantalla ****
-************************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 3: Pintar píxeles por la pantalla %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Reto 3.1: Pintar un pixel rojo en otra posición de la pantalla
 ----------------------------------------------------------------
@@ -110,8 +110,9 @@ Reto 3.3: [Creativo] Pintar píxeles de colores en distintas líneas de pantalla
  LD A, #08 : LD (C801), A 
  LD A, #88 : LD (D800), A : LD (D801), A : LD (D802), A : JR 0
 
-**** Reto 4: Dominar el formato de pantalla ****
-************************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 4: Dominar el formato de pantalla %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Reto 4.1: Pintar los 4 primeros píxeles de pantalla de color rojo
 ------------------------------------------------------------------
@@ -150,8 +151,9 @@ Reto 4.4: [Creativo] Hacer un dibujo en 1 línea (80 píxeles o más) que use lo
  LD HL, #0C0C : LD (C014), HL : LD HL, #0808 : LD (C016), HL 
  LD HL, #0000 : LD (C018), HL : JR 0
 
-**** Reto 5: Dominar la distribución de pantalla en memoria ****
-****************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 5: Dominar la distribución de pantalla en memoria %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Reto 5.1 Pintar un cuadrado de 4x8 píxeles a franjas de colores en la esquina superior izquierda de la pantalla
 ----------------------------------------------------------------
@@ -208,139 +210,112 @@ Línea 13 (96px 12*8): 0xC370. Columna 0-5 (0-40px, 0-10bytes): 0xC370-0xC37A
  LD HL, #0000 : LD (DB70), HL : LD (DB72), HL : LD (DB74), HL : LD (DB76), HL : LD (DB78), HL 
               : LD (FB70), HL : LD (FB72), HL : LD (FB74), HL : LD (FB76), HL : LD (FB78), HL 
 
-Reto 5.4 Dibujar un marco alrededor del mensaje "Ready" y sus 3 filas siguientes (tamaño 8x5 carácteres, 64x40 píxeles)
-----------------------------------------------------------------
-
-Reto 5.4 Pintar una cara de un dado de 8x8 píxeles en la posición 16x7 en caracteres (120x48 píxeles)
-----------------------------------------------------------------
-
-Línea 7 (48px 6*8): 0xC1E0. Columna 16 (120px = 15*8 = 30 bytes) : 0xC1FE 
-
- 21 FF FF 22 FE C1 21 F9 F9 22 FE C9
- 21 FF FF 22 FE D1 21 F9 F9 22 FE D9
- 21 FF FF 22 FE E1 21 F9 F9 22 FE E9
- 21 FF FF 22 FE F1 21 00 00 22 FE F9 18 FE
-
- LD HL, #FFFF : LD (C1FE), HL : LD HL, #F9F9 : LD (C9FE), HL
- LD HL, #FFFF : LD (D1FE), HL : LD HL, #F9F9 : LD (D9FE), HL
- LD HL, #FFFF : LD (E1FE), HL : LD HL, #F9F9 : LD (E9FE), HL
- LD HL, #FFFF : LD (F1FE), HL : LD HL, #0000 : LD (F9FE), HL : JR 0
-
-
 Reto 5.4. [Creativo] Dibujar un marco alrededor de la versión de BASIC del ordenador
 -----------------------------------------------------------------------------
  
- 21 F0 F0 
- 22 D0 E2 22 D2 E2 22 D4 E2 22 D6 E2 22 D8 E2 22 DA E2 
- 22 D0 EA 22 D2 EA 22 D4 EA 22 D6 EA 22 D8 EA 22 DA EA 
- 22 D0 F2 22 D2 F2 22 D4 F2 22 D6 F2 22 D8 F2 22 DA F2 
- 22 D0 FA 22 D2 FA 22 D4 FA 22 D6 FA 22 D8 FA 22 DA FA 
- 22 10 C4 22 12 C4 22 14 C4 22 16 C4 22 18 C4 22 1A C4 
- 22 10 CC 22 12 CC 22 14 CC 22 16 CC 22 18 CC 22 1A CC 
- 22 10 D4 22 12 D4 22 14 D4 22 16 D4 22 18 D4 22 1A D4 
- 22 10 DC 22 12 DC 22 14 DC 22 16 DC 22 18 DC 22 1A DC 
- 3E F0
- 32 20 C3 32 20 CB 32 20 D3 32 20 DB 32 20 E3 32 20 EB 32 20 F3 32 20 FB
- 32 70 C3 32 70 CB 32 70 D3 32 70 DB 32 70 E3 32 70 EB 32 70 F3 32 70 FB
- 32 C0 C3 32 C0 CB 32 C0 D3 32 C0 DB 32 C0 E3 32 C0 EB 32 C0 F3 32 C0 FB
- 32 2B C3 32 2B CB 32 2B D3 32 2B DB 32 2B E3 32 2B EB 32 2B F3 32 2B FB
- 32 7B C3 32 7B CB 32 7B D3 32 7B DB 32 7B E3 32 7B EB 32 7B F3 32 7B FB
- 32 CB C3 32 CB CB 32 CB D3 32 CB DB 32 CB E3 32 CB EB 32 CB F3 32 CB FB
+ 3E 03
+ 32 3D F2 32 3D FA 32 8D C2 32 8D CA 32 8D D2 
+ 32 8D DA 32 8D E2 32 8D EA 32 8D F2 32 8D FA
+ 32 DD C2 32 DD CA
+ 3E 0C
+ 32 44 F2 32 44 FA 32 94 C2 32 94 CA 32 94 D2 
+ 32 94 DA 32 94 E2 32 94 EA 32 94 F2 32 94 FA
+ 32 E4 C2 32 E4 CA
+ 21 FF FF 
+ 22 3E F2 22 40 F2 22 42 F2 
+ 22 3E FA 22 40 FA 22 42 FA 
+ 22 DE C2 22 E0 C2 22 E2 C2 
+ 22 DE CA 22 E0 CA 22 E2 CA
  18 FE
 
-****************************************************
-****************************************************
-****************************************************
-
-Reto 1.4: Pintar un Cuadrado de 8x8 píxeles del mismo color
+Reto 5.5 [Creativo] Dibujar la cara de un dado en cualquier parte del centro de la pantalla
 ----------------------------------------------------------------
- 3E F0 
- 32 00 C0 32 01 C0 
- 32 00 C8 32 01 C8 
- 32 00 D0 32 01 D0 
- 32 00 D8 32 01 D8 
- 32 00 E0 32 01 E0 
- 32 00 E8 32 01 E8 
- 32 00 F0 32 01 F0 
- 32 00 F8 32 01 F8
+
+ POSICIÓN: 0xC3D6 - Locate 12, 13 (88x96 px)
+
+ 21 F0 F0 22 D6 C3 
+          22 D6 D3 
+          22 D6 E3 
+          22 D6 F3 
+ 21 F6 F6 22 D6 CB
+          22 D6 DB
+          22 D6 EB 18 FE
+ 
+ LD HL, #F0F0 : LD (D6C3), HL : LD (D6D3), HL : LD (D6E3), HL : LD (D6F3), HL 
+ LD HL, #F6F6 : LD (D6CB), HL : LD (D6DB), HL : LD (D6EB), HL : JR 0
+
+*******************************************
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*%%%% RETO MAESTRO: Dibujar un sprite %%%%*
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*******************************************
+
+ ÁRBOL 16x16
+ POSICIÓN: LOCATE 6,11 (40x80) => 0xC32A
+
+ 21 00 01 22 2A C3  21 0C 00 22 2C C3
+ 21 00 03 22 2A CB  21 07 08 22 2C CB
+ 21 01 0E 22 2A D3  21 0B 06 22 2C D3
+ 21 03 07 22 2A DB  21 1A 0C 22 2C DB
+ 21 02 0B 22 2A E3  21 05 0C 22 2C E3
+ 21 03 84 22 2A EB  21 0A 0A 22 2C EB
+ 21 25 0B 22 2A F3  21 07 42 22 2C F3
+ 21 24 06 22 2A FB  21 0E 0E 22 2C FB
+ 21 06 0B 22 7A C3  21 69 0C 22 7C C3
+ 21 03 2D 22 7A CB  21 0F 08 22 7C CB
+ 21 00 07 22 7A D3  21 CC 00 22 7C D3
+ 21 00 33 22 7A DB  21 6C 00 22 7C DB
+ 21 F0 E3 22 7A E3  21 7C F0 22 7C E3
+ 21 F0 F7 22 7A EB  21 FE F0 22 7C EB
+ 21 F0 F3 22 7A F3  21 FC F0 22 7C F3
+ 21 F0 F0 22 7A FB  21 F0 F0 22 7C FB 18 FE
+
+ MARCIANO 16x16
+ POSICIÓN: LOCATE 8,11 (48x80) => 0xC32E
+
+ 21 5C 0F 22 2E C3 21 0F A3 22 30 C3 
+ 21 26 78 22 2E CB 21 E1 46 22 30 CB 
+ 21 13 7B 22 2E D3 21 E7 8C 22 30 D3 
+ 21 01 7B 22 2E DB 21 E7 08 22 30 DB 
+ 21 00 78 22 2E E3 21 E1 00 22 30 E3 
+ 21 00 69 22 2E EB 21 0F 00 22 30 EB 
+ 21 00 78 22 2E F3 21 E1 00 22 30 F3 
+ 21 00 0F 22 2E FB 21 0F 00 22 30 FB 
+ 21 00 5A 22 7E C3 21 A5 00 22 80 C3 
+ 21 00 5E 22 7E CB 21 A7 00 22 80 CB 
+ 21 01 13 22 7E D3 21 8C 08 22 80 D3 
+ 21 01 02 22 7E DB 21 04 08 22 80 DB 
+ 21 02 04 22 7E E3 21 02 04 22 80 E3 
+ 21 04 04 22 7E EB 21 02 02 22 80 EB 
+ 21 04 04 22 7E F3 21 02 02 22 80 F3 
+ 21 C0 C0 22 7E FB 21 30 30 22 80 FB 
  18 FE
 
- LD A, #F0 
- LD (C000), A : LD (C001), A 
- LD (C800), A : LD (C801), A 
- LD (D000), A : LD (D001), A 
- LD (D800), A : LD (D801), A 
- LD (E000), A : LD (E001), A 
- LD (E800), A : LD (E801), A 
- LD (F000), A : LD (F001), A 
- LD (F800), A : LD (F801), A 
- JR 0
+ Árbol       Marciano
+ 0001 0C00   5C0F 0FA3     
+ 0003 0708   2678 E146
+ 010E 0B06   137B E78C
+ 0307 1A0C   017B E708
+ 020B 050C   0078 E100
+ 0384 0A0A   0069 0F00
+ 250B 0742   0078 E100
+ 2406 0E0E   000F 0F00
+ 060B 690C   005A A500
+ 032D 0F08   005E A700
+ 0007 CC00   0113 8C08
+ 0033 6C00   0102 0408
+ F0E3 7CF0   0204 0204
+ F0F7 FEF0   0404 0202
+ F0F3 FCF0   0404 0202
+ F0F0 F0F0   C0C0 3030
 
-Reto 1.5: Dibujar un dado con el número 6
-----------------------------------------------------------------
- 3E F0 
- 32 00 C0 32 01 C0 
- 32 00 D0 32 01 D0 
- 32 00 E0 32 01 E0 
- 32 00 F0 32 01 F0 
- 3E F6
- 32 00 C8 32 01 C8 
- 32 00 D8 32 01 D8 
- 32 00 E8 32 01 E8 
- 18 FE
+======================================================================
+======================================================================
+OTRAS PRUEBAS Y EXPERIMENTOS
+======================================================================
+======================================================================
 
- LD A, #F0 
- LD (C000), A : LD (C001), A 
- LD (D000), A : LD (D001), A 
- LD (E000), A : LD (E001), A 
- LD (F000), A : LD (F001), A 
- LD A, #F6
- LD (C800), A : LD (C801), A 
- LD (D800), A : LD (D801), A 
- LD (E800), A : LD (E801), A 
- JR 0
-
-Reto 1.6: Dibujar un sprite propio de tamaño 16x16
-----------------------------------------------------------------
-
-21 5C 0F 22 00 C0 21 0F A3 22 02 C0 
-21 26 78 22 00 C8 21 E1 46 22 02 C8 
-21 13 7B 22 00 D0 21 E7 8C 22 02 D0 
-21 01 7B 22 00 D8 21 E7 08 22 02 D8 
-21 00 78 22 00 E0 21 E1 00 22 02 E0 
-21 00 69 22 00 E8 21 0F 00 22 02 E8 
-21 00 78 22 00 F0 21 E1 00 22 02 F0 
-21 00 0F 22 00 F8 21 0F 00 22 02 F8 
-21 00 5A 22 50 C0 21 A5 00 22 52 C0 
-21 00 5E 22 50 C8 21 A7 00 22 52 C8 
-21 01 13 22 50 D0 21 8C 08 22 52 D0 
-21 01 02 22 50 D8 21 04 08 22 52 D8 
-21 02 04 22 50 E0 21 02 04 22 52 E0 
-21 04 04 22 50 E8 21 02 02 22 52 E8 
-21 04 04 22 50 F0 21 02 02 22 52 F0 
-21 C0 C0 22 50 F8 21 30 30 22 52 F8 
-18 FE
-
- LD HL, #0F5C : LD (C000), HL : LD HL, #A30F : LD (C002), HL
- LD HL, #7826 : LD (C800), HL : LD HL, #46E1 : LD (C802), HL
- LD HL, #7B13 : LD (D000), HL : LD HL, #8CE7 : LD (D002), HL
- LD HL, #7B01 : LD (D800), HL : LD HL, #08E7 : LD (D802), HL
- LD HL, #7800 : LD (E000), HL : LD HL, #00E1 : LD (E002), HL
- LD HL, #6900 : LD (E800), HL : LD HL, #000F : LD (E802), HL
- LD HL, #7800 : LD (F000), HL : LD HL, #00E1 : LD (F002), HL
- LD HL, #0F00 : LD (F800), HL : LD HL, #000F : LD (F802), HL
- LD HL, #5A00 : LD (C050), HL : LD HL, #00A5 : LD (C052), HL
- LD HL, #5E00 : LD (C850), HL : LD HL, #00A7 : LD (C852), HL
- LD HL, #1301 : LD (D050), HL : LD HL, #088C : LD (D052), HL
- LD HL, #0201 : LD (D850), HL : LD HL, #0804 : LD (D852), HL
- LD HL, #0402 : LD (E050), HL : LD HL, #0402 : LD (E052), HL
- LD HL, #0404 : LD (E850), HL : LD HL, #0202 : LD (E852), HL
- LD HL, #0404 : LD (F050), HL : LD HL, #0202 : LD (F052), HL
- LD HL, #C0C0 : LD (F850), HL : LD HL, #3030 : LD (F852), HL
- JR 0
-
-
-Reto 2.1: Mover un bloque de 4x1 píxeles por la pantalla
+Mover un bloque de 4x1 píxeles por la pantalla
 ----------------------------------------------------------------
 3E 00 21 00 FF 22 00 C0 76 76 76 76 76 76 22 01 C0 76 76 76 76 76 76 22 02 C0 76 76 76 76 76 76 22 03 C0 76 76 76 76 76 76 22 04 C0 76 76 76 76 76 76 22 05 C0 76 76 76 76 76 76 22 06 C0 76 76 76 76 76 76 22 07 C0 76 76 76 76 76 76 22 08 C0 76 76 76 76 76 76 22 09 C0 76 76 76 76 76 76 22 0A C0 76 76 76 76 76 76 22 0B C0 76 76 76 76 76 76 22 0C C0 76 76 76 76 76 76 22 0D C0 76 76 76 76 76 76 22 0E C0 76 76 76 76 76 76 22 0F C0 76 76 76 76 76 76 22 10 C0 76 76 76 76 76 76 22 11 C0 76 76 76 76 76 76 22 12 C0 76 76 76 76 76 76 22 13 C0 76 76 76 76 76 76 22 14 C0 76 76 76 76 76 76 22 15 C0 76 76 76 76 76 76 22 16 C0 76 76 76 76 76 76 22 17 C0 76 76 76 76 76 76 22 18 C0 76 76 76 76 76 76 22 19 C0 76 76 76 76 76 76 22 1A C0 76 76 76 76 76 76 22 1B C0 76 76 76 76 76 76 22 1C C0 76 76 76 76 76 76 22 1D C0 76 76 76 76 76 76 22 1E C0 76 76 76 76 76 76 22 1F C0 76 76 76 76 76 76 22 20 C0 76 76 76 76 76 76 32 21 C0 C3 02 40
 
@@ -382,7 +357,7 @@ Reto 2.1: Mover un bloque de 4x1 píxeles por la pantalla
  LD (C021), A
  JP #4002
 
-Reto 2.2: Copiar una línea de pantalla a otra zona
+Copiar una línea de pantalla a otra zona
 ----------------------------------------------------------------
 
 21 50 C0 11 00 C0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 18 FE
