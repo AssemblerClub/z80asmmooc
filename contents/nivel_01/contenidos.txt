@@ -5,20 +5,30 @@
    - Presentación: 
       - Objetivo: dominar las máquinas
       - ¿A quién va dirigido?
+      	- Aprender a programar desde 0: sentar buenas bases
+      	- Ser un buen programador: dominar los niveles bottom-up
       - Curso práctico: retos y niveles
+      - Creatividad: No solución única (salvo ejercicios introductorios)
 
 ========================================================================
 == NIVEL 1: Código Máquina
 ========================================================================
 
 INTRODUCCIÓN:
-   - Objetivo del módulo: dibujar un sprite
+   - Objetivo del módulo: dibujar sprites en código máquina
    - Conceptos a dominar: ejecución, cpu, memoria, bajo nivel.
 
 BASES DEL APRENDIZAJE:
+   - Aprender a programar se hace programando. La teoría sólo ayuda a dirigir.
+   - Aprender: practicar, fallar, entender, corregir, repetir
+      - No hay que tener vergüenza ni miedo de fallar, sino disfrute.
 
 PRÁCTICA:
    - Presentación de los Retos
+   - Solución de ejemplo del reto 1.1
+	   - Introducir datos en memoria
+   - Instalación de WinAPE
+   - Depurador: ejecución paso a paso
 
 TEORIA:
    - El código máquina: órdenes para la CPU
@@ -30,18 +40,6 @@ TEORIA:
       - Sistemas de numeración: hexadecimal, más fácil de leer
    - Ordenadores de los 80: Amstrad CPC
       - Memoria y CPU
-
-
-
-RETO: 
-   - Dibujar sprites en pantalla en código máquina
-
-OBJETIVOS: 
-   - Entender el funcionamiento básico de la arquitectura Von Newmann
-   - Entender qué es la memoria y cómo se estructura
-   - Entender cómo funciona la memoria de vídeo y su relación con la pantalla
-   - Entender qué es y cómo funciona el código máquina
-   - Entender los sistemas numéricos básicos: Hexadecimal y binario
-   - Entender el cíclo básico de ejecución FETCH-DECODE-EXECUTE
-   - Programar rutinas básicas en código máquina
-
+   	- Memoria de vídeo
+   		- El monitor CRT
+   		- El chip CRTC 
