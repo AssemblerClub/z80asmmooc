@@ -1,0 +1,47 @@
+========================================================================
+== INTRODUCCIÓN AL CURSO
+========================================================================
+
+   - Presentación: 
+      - Objetivo: dominar las máquinas
+      - ¿A quién va dirigido?
+      - Curso práctico: retos y niveles
+
+========================================================================
+== NIVEL 1: Código Máquina
+========================================================================
+
+INTRODUCCIÓN:
+   - Objetivo del módulo: dibujar un sprite
+   - Conceptos a dominar: ejecución, cpu, memoria, bajo nivel.
+
+BASES DEL APRENDIZAJE:
+
+PRÁCTICA:
+   - Presentación de los Retos
+
+TEORIA:
+   - El código máquina: órdenes para la CPU
+   - Ejecución secuencial básica: Ciclo Fetch-Decode-Execute
+   - Funcionamiento de la memoria:
+      - Almacenamiento de datos: bits y bytes
+      - Sistemas de numeración: binario, el sistema de la memoria
+      - La memoria: organización en bytes, acceso de lectura y escritura
+      - Sistemas de numeración: hexadecimal, más fácil de leer
+   - Ordenadores de los 80: Amstrad CPC
+      - Memoria y CPU
+
+
+
+RETO: 
+   - Dibujar sprites en pantalla en código máquina
+
+OBJETIVOS: 
+   - Entender el funcionamiento básico de la arquitectura Von Newmann
+   - Entender qué es la memoria y cómo se estructura
+   - Entender cómo funciona la memoria de vídeo y su relación con la pantalla
+   - Entender qué es y cómo funciona el código máquina
+   - Entender los sistemas numéricos básicos: Hexadecimal y binario
+   - Entender el cíclo básico de ejecución FETCH-DECODE-EXECUTE
+   - Programar rutinas básicas en código máquina
+
