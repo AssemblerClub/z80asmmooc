@@ -24,17 +24,28 @@ BASES DEL APRENDIZAJE:
       - No hay que tener vergüenza ni miedo de fallar, sino disfrute.
 
 PRÁCTICA:
-   - Presentación de los Retos
-   - Solución de ejemplo del reto 1.1
-	   - Introducir datos en memoria
    - Instalación de WinAPE
-   - Depurador: ejecución paso a paso
+      - Introducción a WinAPE y Amstrad     
+   - Presentación de los Retos
+      - Solución de ejemplo del reto 1.1
+      - Presentación de los retos por niveles y resultados esperados
+      - Depurador: ejecución paso a paso
+   - Presentación de las instrucciones
+      - LD  A, xx
+      - LD HL, xxxxx
+      - LD (xxxx),  A
+      - LD (xxxx), HL
+      - JR 0
+      - clrhome.org/table (todas las instrucciones)
 
 TEORIA:
    - El código máquina: órdenes para la CPU
-   - Ejecución secuencial básica: Ciclo Fetch-Decode-Execute
+      - Formato de instrucción: Opcodes y Operandos
+      - Ejecución secuencial básica: Ciclo Fetch-Decode-Execute
+      - Little Endianness
    - Funcionamiento de la memoria:
       - Almacenamiento de datos: bits y bytes
+      - RAM, ROM y Bus
       - Sistemas de numeración: binario, el sistema de la memoria
       - La memoria: organización en bytes, acceso de lectura y escritura
       - Sistemas de numeración: hexadecimal, más fácil de leer
@@ -43,3 +54,6 @@ TEORIA:
    	- Memoria de vídeo
    		- El monitor CRT
    		- El chip CRTC 
+
+CURIOSIDADES:
+   - Programas en BASIC para cargar código máquina
