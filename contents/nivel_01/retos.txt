@@ -63,18 +63,20 @@ Reto 2.3: Conseguir "borrar" el primer píxel (pintarlo del color del fondo)
 %%%% Reto 3: Pintar píxeles por la pantalla %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Reto 3.1: Pintar un pixel rojo en otra posición de la pantalla
-Reto 3.2: Pintar 3 píxeles, uno de cada color, en la misma línea de pantalla (distintas posiciones)
-Reto 3.3: [Creativo] Pintar píxeles de colores en distintas líneas de pantalla (Puedes intentar que formen un dibujo)
+Reto 3.1: [C] Pintar un pixel rojo en otra posición de la pantalla
+Reto 3.2: [C] Pintar 3 píxeles, uno de cada color, en la misma línea de pantalla (distintas posiciones)
+Reto 3.3: [C] Pintar 5 píxeles seguidos en la misma columna de pantalla
+Reto 3.4: [C] Pintar píxeles de colores en distintas líneas de pantalla 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 4: Dominar el formato de pantalla %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Reto 4.1: Pintar los 4 primeros píxeles de pantalla de color rojo
-Reto 4.2: Pintar los 16 primeros píxeles: 4 rojos, 4 azules, 4 cian, 4 amarillos
-Reto 4.3: Pintar el patrón 4.2 pero en 8 píxeles: 2 rojos, 2 azules, 2 cian, 
-Reto 4.4: [Creativo] Hacer un dibujo en 1 línea (80 píxeles o más) que use los 4 colores (Tratar de combinar los píxeles de colores lo más posible)
+Reto 4.2: [C] Pintar los 24 primeros píxeles de colores de 4 en 4. Bonus por usar HL.
+Reto 4.3: [C] Pintar el patrón 3.2 pero en grupos de 2 en 2, en 12 píxeles. Bonus por usar HL y A.
+Reto 4.4: [C] Pinta los 8 primeros píxeles de colores de 1 en 1
+Reto 4.5: [CC] Hacer un dibujo en 1 línea (80 píxeles o más) que use los 4 colores (Tratar de combinar los píxeles de colores lo más posible)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 5: Dominar la distribución de pantalla en memoria %%%%

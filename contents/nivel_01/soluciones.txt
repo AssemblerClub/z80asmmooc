@@ -52,9 +52,6 @@ Reto 1.1: Pintar un pixel rojo en la esquina superior izquierda
 ----------------------------------------------------------------
  
  3E 88 32 00 C0 18 FE
- 
- LD A, #88 : LD (C000), A : JR 0
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 2: Dominar los colores del píxel %%%%
@@ -64,51 +61,41 @@ Reto 2.1: Conseguir que el primer píxel sea de color azul
 ----------------------------------------------------------
  
  3E 08 32 00 C0 18 FE
- 
- LD A, #08 : LD (C000), A : JR 0
 
 Reto 2.2: Conseguir que el primer píxel sea de color amarillo
 ----------------------------------------------------------------
  
  3E 80 32 00 C0 18 FE
- 
- LD A, #80 : LD (C000), A : JR 0
 
 Reto 2.3: Conseguir "borrar" el primer píxel (pintarlo del color del fondo)
 ----------------------------------------------------------------------------
  
  3E 00 32 00 C0 18 FE
  
- LD A, #00 : LD (C000), A : JR 0
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 3: Pintar píxeles por la pantalla %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Reto 3.1: Pintar un pixel rojo en otra posición de la pantalla
+Reto 3.1: [C] Pintar un pixel rojo en otra posición de la pantalla
 ----------------------------------------------------------------
 
- 3E 88 32 20 C0 18 FE
+ 3E 88 32 70 C0 18 FE
  
- LD A, #88 : LD (C020), A : JR 0
-
-Reto 3.2: Pintar 3 píxeles, uno de cada color, en la misma línea de pantalla (distintas posiciones)
+Reto 3.2: [C] Pintar 3 píxeles, uno de cada color, en la misma línea de pantalla (distintas posiciones)
 --------------------------------------------------------------------------
 
- 3E 88 32 20 C0 32 00 C0 32 10 C0 18 FE
- 
- LD A, #88 : LD (C020), A : LD (C000), A : LD (C010), A : JR 0
+ 3E 88 32 D3 CA 3E 80 32 D5 CA 3E 08 32 D7 CA 18 FE
 
-
-Reto 3.3: [Creativo] Pintar píxeles de colores en distintas líneas de pantalla (Puedes intentar que formen un dibujo)
+Reto 3.3: [C] Pintar 5 píxeles seguidos en la misma columna de pantalla
 --------------------------------------------------------------------------
 
- 3E 80 32 00 C0 32 00 C8 32 00 D0 32 01 C0 32 02 C0 32 02 C8 32 02 D0 32 01 D0 3E 08 32 01 C8 3E 88 32 00 D8 32 01 D8 32 02 D8 18 FE
+ 3E 88 32 FD C8 3E 08 32 FD D0 3E 80 32 FD D8 3E 08 32 FD E0 3E 88 32 FD E8 18 FE
 
- LD A, #80 : LD (C000), A : LD (C800), A : LD (D000), A : LD (C001), A
-             LD (C002), A : LD (C802), A : LD (D002), A : LD (D001), A  
- LD A, #08 : LD (C801), A 
- LD A, #88 : LD (D800), A : LD (D801), A : LD (D802), A : JR 0
+
+Reto 3.4: [C] Pintar píxeles de colores en distintas líneas de pantalla (Puedes intentar que formen un dibujo)
+--------------------------------------------------------------------------
+
+ 3E 80 32 92 C0 32 92 C8 32 92 D0 32 93 C0 32 94 C0 32 94 C8 32 94 D0 32 93 D0 3E 08 32 93 C8 3E 88 32 92 D8 32 93 D8 32 94 D8 18 FE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 4: Dominar el formato de pantalla %%%%
@@ -119,37 +106,27 @@ Reto 4.1: Pintar los 4 primeros píxeles de pantalla de color rojo
  
  3E FF 32 00 C0 18 FE
 
- LD A, #FF : LD (C000), A : JR 0
-
-Reto 4.2: Pintar los 16 primeros píxeles: 4 rojos, 4 azules, 4 cian, 4 amarillos. (Plus: de 2 formas. Usando A y usando HL)
+Reto 4.2: [C] Pintar los 24 primeros píxeles de colores de 4 en 4. Bonus por usar HL.
 --------------------------------------------------------------------
 
- 21 FF 00 22 00 C0 21 0F F0 22 02 C0 18 FE
+ 21 FF F0 22 00 C0 21 F0 0F 22 02 C0 21 0F FF 22 04 C0 18 FE
  
- LD HL, #00FF : LD (C000), HL
- LD HL, #0FF0 : LD (C000), HL : JR 0
-
-Reto 4.3: Pintar el patrón 3.2 pero en 8 píxeles: 2 rojos, 2 azules, 2 cian, 2 amarillos. (Plus: de 2 formas. Usando A y Usando HL)
+Reto 4.3: [C] Pintar el patrón 3.2 pero en grupos de 2 en 2, en 12 píxeles. Bonus por usar HL y A.
 --------------------------------------------------------------------
 
- 21 CC 3C 22 00 C0 18 FE
- LD HL, #3CCC : LD (C000), HL : JR 0
+ 21 FC C3 22 00 C0 3E 3F 32 02 C0 18 FE
 
-Reto 4.4: [Creativo] Hacer un dibujo en 1 línea (80 píxeles o más) que use los 4 colores (Tratar de combinar los píxeles de colores lo más posible)
+Reto 4.4: [C] Pinta los 8 primeros píxeles de colores de 1 en 1
+
+ 21 DA 5B 22 00 C0 18 FE
+
+Reto 4.5: [CC] Hacer un dibujo en 1 línea (80 píxeles o más) que use los 4 colores (Tratar de combinar los píxeles de colores lo más posible)
 --------------------------------------------------------------------
 
  21 FF FF 22 00 C0 21 FE FE 22 02 C0 21 FC FC 22 04 C0 21 F8 F8 22 06 C0 
  21 F0 F0 22 08 C0 21 E1 E1 22 0A C0 21 C3 C3 22 0C C0 21 87 87 22 0E C0 
  21 0F 0F 22 10 C0 21 0E 0E 22 12 C0 21 0C 0C 22 14 C0 21 08 08 22 16 C0 
  21 00 00 22 18 C0 18 FE
- 
- LD HL, #FFFF : LD (C000), HL : LD HL, #FEFE : LD (C002), HL 
- LD HL, #FCFC : LD (C004), HL : LD HL, #F8F8 : LD (C006), HL 
- LD HL, #F0F0 : LD (C008), HL : LD HL, #E1E1 : LD (C00A), HL 
- LD HL, #C3C3 : LD (C00C), HL : LD HL, #8787 : LD (C00E), HL 
- LD HL, #0F0F : LD (C010), HL : LD HL, #0E0E : LD (C012), HL 
- LD HL, #0C0C : LD (C014), HL : LD HL, #0808 : LD (C016), HL 
- LD HL, #0000 : LD (C018), HL : JR 0
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 5: Dominar la distribución de pantalla en memoria %%%%
