@@ -82,10 +82,10 @@ Reto 4.5: [CC] Hacer un dibujo en 1 línea (80 píxeles o más) que use los 4 co
 %%%% Reto 5: Dominar la distribución de pantalla en memoria %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Reto 5.1 Pintar un cuadrado de 4x8 píxeles a franjas de colores en la esquina superior izquierda de la pantalla
+Reto 5.1 [C] Pintar un cuadrado de 4x8 píxeles a franjas de colores en la esquina superior izquierda de la pantalla
 Reto 5.2 Dibujar el mismo cuadrado del reto 5.1, pero debajo de la R de Ready (Posición 1x12 en caracteres, 0x96)
 Reto 5.3 Extender el cuadrado del reto 5.2 para ocupar 40x8 píxeles justo debajo del mensaje "Ready" en pantalla (subrayándolo)
-Reto 5.4 [Creativo] Dibujar un marco alrededor del número de versión de BASIC. Debe tener 2 píxeles de ancho como mínimo.
+Reto 5.4 [C] Dibujar un marco alrededor del número de versión de BASIC. Debe tener 2 píxeles de ancho como mínimo.
 Reto 5.5 [Creativo] Dibujar la cara de un dado en cualquier parte del centro de la pantalla
 
 *******************************************
