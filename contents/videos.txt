@@ -1,0 +1,38 @@
+========================================================================
+== LINEAS DE VÍDEO
+========================================================================
+
+PRÁCTICA    >> Línea principal. Presentación de Retos y ejemplos.
+TEORIA      >> Vídeos explicativos de apoyo para la realización de los retos.
+APRENDIZAJE >> Vídeos adicionales con consejos sobre aprendizaje, 
+               motivación, planificación y autoconocimiento.
+
+========================================================================
+== VÍDEOS DE INTRODUCCIÓN
+========================================================================
+
+0.1) INTRODUCCIÓN GENERAL
+   - En qué consiste el curso (Dominar las máquinas y su programación)
+   - A quíen va dirigido 
+      - Aprender a programar desde 0 con las mejores bases
+      - Ser un buen programador: dominar la magia
+
+0.2) LINEAS DE VÍDEOS
+   - Estructura del curso
+      - Resolución de Retos como línea principal
+         - Objetivo: Crear videojuegos y disfrutar de lo que se crea
+      - Vídeos de teoría de apoyo para aprender conforme se necesita
+      - Vídeos de aprendizaje y metodologia para motivarse y aprender mejor
+      
+0.3) EVALUACIÓN
+   - Curso autoevaluado
+      - Resuelve los retos a tu estilo. 
+      - Puedes saber si está resuelto por el propio resultado.
+      - Puedes alterar el orden a tu gusto.
+      - Ve más allá: si quieres dominar, tienes que practicar mucho.
+   - Portfolio
+      - Implementa un juego con lo que aprendas. Ese es el mejor certificado que puedes obtener.
+
+0.4) COMIENZA EL CURSO
+   - Empieza por los retos del nivel 1
+   - Usa el material adicional: Libros de retos y teoría

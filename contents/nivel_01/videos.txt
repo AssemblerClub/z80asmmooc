@@ -1,0 +1,94 @@
+========================================================================
+== VIDEOS -PRACTICA-
+========================================================================
+
+1.P1) INTRO
+   - Presentación de objetivos del nivel.
+   - Dibujar un sprite en pantalla.
+   - Empezar pintando píxeles, cambiando colores y posicionando
+
+1.P2) EJEMPLO PIXEL
+   - Solución del reto 1.1. a modo de ejemplo. Introducción al uso de
+   WinAPE y la solución de Retos.
+   - Introducción instrucciones 3E, 21 y 18
+
+1.P3) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
+
+1.P4) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
+
+1.P5) EJEMPLO PIXELES EN PANTALLA
+   - Se muestra como pintar píxeles en pantalla sin calcular posiciones,
+   pintando aleatoriamente. Se indica que conocer el formato permite 
+   pintar donde uno quiere y se remite a teoría.
+   - Introducción instrucciones 32 y 22
+
+1.P6) PRESENTACIÓN RETO "POSICIONA PÍXELES EN PANTALLA"
+
+1.P7) PRESENTACIÓN RETO "DOMINA LA DISTRIBUCIÓN DE LA MEMORIA DE VÍDEO"
+
+1.P8) PRESENTACIÓN RETO MAESTRO "DIBUJA UN SPRITE EN PANTALLA"
+
+========================================================================
+== VIDEOS -TEORÍA-
+========================================================================
+
+1.T1) EXPLICACIÓN CICLO DE EJECUCIÓN
+   - Entender el funcionamiento de procesador y memoria
+   - Entender secuencialidad de instrucciones
+
+1.T2) EXPLICACIÓN FUNCIONAMIENTO DE LA MEMORIA
+   - Base: Biestables, binario
+   - Agrupación en Bytes
+   - Distribución en una matriz
+   - Lectura / Escritura
+   - Direcciones lineales
+
+1.T3) EXPLICACIÓN DE NUMERACIÓN BINARIA
+   - Los números binarios, 0-1
+   - Contar en binario
+   - Conversión sencilla a decimal
+   - Entendiendo el significado
+
+1.T4) EXPLICACIÓN DE NUMERACIÓN HEXADECIMAL
+   - Los dígitos hexadecimales 0-F
+   - ¿Por qué hexadecimal?
+   - Conversión Binario-Hex y viceversa
+
+1.T5) EXPLICACIÓN CONCEPTO MEMORIA DE VÍDEO
+   - Se almacena la pantalla en memoria
+   - Un chip (CRTC) la transmite a la pantalla
+   - Si se modifica la memoria, se ve en pantalla
+   - Memoria compartida y exclusiva
+
+1.T6) EXPLICACIÓN FORMATO DE PÍXELES EN PANTALLA
+   - Necesidad de 2 bits por cada píxel
+   - Cada byte tiene 4 colores
+   - Distribución de los bits 
+   - Uso de hexadecimal 
+
+1.T7) EXPLICACIÓN DISTRIBUCIÓN MEMORIA DE VÍDEO
+   - Contiguidad de los píxeles y bytes
+   - Caracteres y Píxeles
+   - 8 líneas de píxeles
+
+========================================================================
+== VIDEOS -APRENDIZAJE-
+========================================================================
+
+1.A1) SE APRENDE HACIENDO
+   - El curso explica y guía
+   - Aprender sólo se aprende haciendo
+   - Ejemplos tipo baloncesto
+   - Practicar, practicar, practicar
+
+1.A2) EQUIVOCARSE ES NECESARIO
+   - Las cosas se hacen bien cuando algo se domina
+   - Para dominar hay que hacer
+   - Los errores son parte del aprendizaje
+   - Sin errores no hay dominio
+   - Todos nos equivocamos
+
+1.A3) SALTARSE LAS REGLAS
+   - Aprender require experimentar
+   - Experimentar es probar cosas desconocidas
+   - Sáltate las reglas y prueba
