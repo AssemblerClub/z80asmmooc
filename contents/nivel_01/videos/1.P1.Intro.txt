@@ -3,6 +3,16 @@
 ========================================================================
 
 INTRODUCCIÓN NIVEL 1
+
+   - OBJETIVO => RETO MAESTRO
+      - Dibujar un sprite en pantalla
+
+   - PASOS PARA OBTENERLO
+      - Aprender a escribir programas muy sencillos
+      - Aprender a dibujar píxeles de colores
+      - Entender cómo funciona la memoria de vídeo
+      - Aprender a pintar en distintas partes
+
    - Presentación de objetivos del nivel.
    - Dibujar un sprite en pantalla.
    - Empezar pintando píxeles, cambiando colores y posicionando
