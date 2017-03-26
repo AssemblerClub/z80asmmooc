@@ -17,15 +17,27 @@ APRENDIZAJE >> Vídeos adicionales con consejos sobre aprendizaje,
       - Aprender a programar desde 0 con las mejores bases
       - Ser un buen programador: dominar la magia
 
-0.2) LINEAS DE VÍDEOS
-   - Estructura del curso
-      - Resolución de Retos como línea principal
-         - Objetivo: Crear videojuegos y disfrutar de lo que se crea
-      - Vídeos de teoría de apoyo para aprender conforme se necesita
-      - Vídeos de aprendizaje y metodologia para motivarse y aprender mejor
-      
-0.3) EVALUACIÓN
+0.2) ESTRUCTURA DEL CURSO
+   - Curso práctico: Practicar, practicar, practicar
+   - Resolución de Retos como línea principal
+      - Objetivo: Crear videojuegos y disfrutar de lo que se crea
+   - NIVELES
+      - EJEMPLOS
+      - RETOS
+         - ACTIVIDADES
+      - RETO MAESTRO
+
+0.3) LINEAS DE VÍDEOS
+   - Curso compuesto de 3 líneas:
+      - Práctica:    Línea principal con los retos y actividades propuestas
+      - Teoría:      Apoyo para aprender conceptos conforme se necesitan
+      - Aprendizaje: Metodologia para motivarse y aprender mejor
+
+0.4) EVALUACIÓN
    - Curso autoevaluado
+      - Consejo: Sigue tu propio ritmo
+         - Principal:   Realizar los retos
+         - El órden es lógico, pero no importa. Importa más divertirse.
       - Resuelve los retos a tu estilo. 
       - Puedes saber si está resuelto por el propio resultado.
       - Puedes alterar el orden a tu gusto.
@@ -33,6 +45,6 @@ APRENDIZAJE >> Vídeos adicionales con consejos sobre aprendizaje,
    - Portfolio
       - Implementa un juego con lo que aprendas. Ese es el mejor certificado que puedes obtener.
 
-0.4) COMIENZA EL CURSO
+0.5) COMIENZA EL CURSO
    - Empieza por los retos del nivel 1
    - Usa el material adicional: Libros de retos y teoría
