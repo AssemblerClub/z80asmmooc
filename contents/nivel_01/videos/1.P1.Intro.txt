@@ -1,0 +1,12 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+INTRODUCCIÓN NIVEL 1
+   - Presentación de objetivos del nivel.
+   - Dibujar un sprite en pantalla.
+   - Empezar pintando píxeles, cambiando colores y posicionando
+
+
+
+
