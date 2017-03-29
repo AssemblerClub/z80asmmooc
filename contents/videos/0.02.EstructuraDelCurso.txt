@@ -1,0 +1,25 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+0.2) ESTRUCTURA DEL CURSO
+
+   - A programar se aprende programando
+      - Programar es una habilidad
+      - Exactamente igual que un deporte
+      - Curso práctico: Practicar, practicar, practicar
+      - Programar, equivocarse, programar
+   - Resolución de Retos como línea principal
+      - Objetivo: Crear videojuegos y disfrutar de lo que se crea
+   
+   - NIVELES
+      - EJEMPLOS
+      - RETOS
+         - ACTIVIDADES
+      - DESAFÍO
+
+   - NIVELES: Progresivos, pero no lineales
+   - DESAFÍO: El objetivo principal de cada Nivel. El boss.
+   - RETOS: Parte principal del curso
+      - EJEMPLOS: Vídeos para aprender cómo empezar
+      - ACTIVIDADES: Propuestas para superar los retos

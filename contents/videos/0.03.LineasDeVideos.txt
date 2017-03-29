@@ -1,0 +1,16 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+0.3) LINEAS DE VÍDEOS
+   
+   - Cómo seguir los vídeos de este curso
+      - Curso compuesto de 3 líneas:
+         - Práctica:    Línea principal con los retos y actividades propuestas
+         - Teoría:      Apoyo para aprender conceptos conforme se necesitan
+         - Aprendizaje: Metodologia para motivarse y aprender mejor
+      - Principal: Práctica
+      - Guiado por la necesidad/curiosidad: Teoría
+      - Mejora del rendimiento: Aprendizaje
+
+   - Siguelo a tu gusto

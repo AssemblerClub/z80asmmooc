@@ -1,0 +1,33 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+0.1) INTRODUCCIÓN GENERAL
+
+   - Objetivo
+      - Sentar las bases para ser buenos programadores
+         - Buenos: conocen los detalles
+         - Pueden hacer magia, gracias a conocer los detalles
+      - Dominar los ordenadores
+      - Dominar la programación
+
+   - ¿A quién va dirigido?
+      - Quieres aprender a programar desde 0, con bases sólidas
+      - Quieres entender los detalles para mejorar como programador
+
+   - Bienvenidos a Dominando ensamblador Z80
+      - Crearás
+         - Videojuegos
+         - Efectos gráficos
+         - Animaciones
+         - Interacción
+      - Aprenderás 
+         - Programación
+         - Código Máquina
+         - Ensamblador Z80
+         - Arquitecturas de 8bits
+      - Entenderás
+         - Cómo funcionan los ordenadores
+         - Los detalles técnicos
+
+=========================================================================

@@ -11,7 +11,16 @@ APRENDIZAJE >> Vídeos adicionales con consejos sobre aprendizaje,
 == VÍDEOS DE INTRODUCCIÓN
 ========================================================================
 
-0.1) INTRODUCCIÓN GENERAL
+0.0) BIENVENIDA
+   - Título del curso: Dominando Ensamblador Z80
+   - Presentación: quién soy
+   - Resumen rápido
+      - Dominar la programación
+      - Conocer los detalles
+      - Hacer Mágia
+      - Crear Videojuegos
+
+0.1) OBJETIVOS Y CONTENIDOS GENERALES
    - En qué consiste el curso (Dominar las máquinas y su programación)
    - A quíen va dirigido 
       - Aprender a programar desde 0 con las mejores bases
