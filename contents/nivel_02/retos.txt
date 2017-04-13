@@ -1,0 +1,98 @@
+========================================================================
+== NIVEL 2: Animaciones y Repeticiones
+========================================================================
+
+RETO: 
+   - Animar un sprite para producir movimiento
+
+OBJETIVOS: 
+   - Entender cómo se realizan animaciones por fotogramas (borado/redibujado)
+   - Entender el funcionamiento del refresco de pantalla
+   - Entender de forma básica inicial la generación de interrupciones (HALT)
+   - Entender la necesidad de repetir trozos de código
+   - Aprender a crear sencillos bucles con DJNZ
+   - Aprender la base de los datos variables utilizando registros
+
+========================================================================
+== RETOS
+========================================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 1: Mover píxeles %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 1.1. [EJ] Animar un píxel rojo que se mueva cíclicamente por los 4 primeros
+      píxeles de la pantalla.
+
+ 1.2. [C] Realizar una animación tipo barra de progreso. Debe empezar con los 4
+      primeros píxeles de un mismo color e ir rellenándolos uno a uno de otro
+      color consecutivamente. Cuando termine un rellenado, debe comenzar otro
+      con otro color. Debe rellenarse de los 4 colores disponibles.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 2: Mover pixeles por la pantalla %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 2.1. [EJ] Animar un grupo de 4 píxeles del mismo color. Moverlo a la derecha
+      de 4 en 4 píxeles. Realizar 5 fotogramas. Repetir infinito.
+
+ 2.2. Producir una animación parecida al coche fantástico en un 
+      rango de 20 píxeles de ancho, basándose en 1.1. Repetir infinito.
+
+ 2.3. [C] Animar un sprite de 4x1 píxeles para que rebote como una pelota
+      sobre el lateral izquierdo de la pantalla. Se puede hacer infinito o
+      hasta pararse.
+
+========================================================================
+== INSTRUCCIONES 
+========================================================================
+   - [  3E##] : LD A, ##
+   - [32####] : LD (####), A
+   - [21####] : LD HL, ####
+   - [22####] : LD (####), HL
+   - [  18##] : JR ##
+
+NUEVAS:
+   - [  06##] : LD B, ##
+   - [  10##] : DJNZ ##
+   - [    76] : HALT
+   - [  EDA0] : LDI
+
+    INC B / DEC B?
+   - [11####] : LD DE, ####
+
+========================================================================
+== ESTRUCTURA DE RETOS DEL NIVEL
+========================================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 1: Mover pixeles por la pantalla %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 1.1. Animar un grupo de 4 píxeles del mismo color. Moverlo a la derecha
+      de 4 en 4 píxeles. Realizar 5 fotogramas.
+
+ 1.2. Producir una animación parecida al coche fantástico en un 
+      rango de 20 píxeles de ancho, basándose en 1.1.
+
+****************************************************
+****************************************************
+** PENDIENTES DE REVISAR
+****************************************************
+****************************************************
+
+Reto 1.4: Pintar un Cuadrado de 8x8 píxeles del mismo color
+Reto 1.5: Dibujar un dado con el número 6
+Reto 1.6: Dibujar un sprite propio de tamaño 16x16
+Reto 2.1: Mover un bloque de 4x1 píxeles por la pantalla
+Reto 2.2: Copiar una línea de pantalla a otra zona
+
+Copiar una línea de pantalla a otra zona
+----------------------------------------------------------------
+
+21 50 C0 11 00 C0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 ED A0 18 FE
+
+ LD HL, #C050
+ LD DE, #C000
+ 80 x LDI 
+ JR 0
