@@ -43,6 +43,13 @@ OBJETIVOS:
       sobre el lateral izquierdo de la pantalla. Se puede hacer infinito o
       hasta pararse.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 3: Utilizar posiciones variables %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 3.1. Animar el grupo de 4 píxeles para que vaya de lado a lado de la 
+      pantalla y vuelva
+
 ========================================================================
 == INSTRUCCIONES 
 ========================================================================
@@ -53,10 +60,23 @@ OBJETIVOS:
    - [  18##] : JR ##
 
 NUEVAS:
+
+000001  0000  (4000)        org &4000
+000002  4000  0E FF         ld c, &FF
+000003  4002  16 FF         ld d, &FF
+000004  4004  1E FF         ld e, &FF
+000005  4006  26 FF         ld h, &FF
+000006  4008  2E FF         ld l, &FF
+000007  400A  C9            ret
+
+
    - [  06##] : LD B, ##
    - [  10##] : DJNZ ##
+   - [    77] : LD (HL), A
+   - [  36##] : LD (HL), ##
+   - [    23] : INC HL
+   - [    2B] : DEC HL
    - [    76] : HALT
-   - [  EDA0] : LDI
 
     INC B / DEC B?
    - [11####] : LD DE, ####
