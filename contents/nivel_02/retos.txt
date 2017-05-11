@@ -36,8 +36,9 @@ OBJETIVOS:
  2.1. [EJ] Animar un grupo de 4 píxeles del mismo color. Moverlo a la derecha
       de 4 en 4 píxeles. Realizar 5 fotogramas. Repetir infinito.
 
- 2.2. Producir una animación parecida al coche fantástico en un 
-      rango de 20 píxeles de ancho, basándose en 1.1. Repetir infinito.
+ 2.2. [EJ] Continuando con la animación de mover de 4 en 4 píxeles del ejercicio 
+      2.1, producir una animación de vaivén, parecida a la del panel frontal del 
+      coche fantástico, en un rango de 20 píxeles de ancho.
 
  2.3. [C] Animar un sprite de 4x1 píxeles para que rebote como una pelota
       sobre el lateral izquierdo de la pantalla. Se puede hacer infinito o
@@ -77,6 +78,7 @@ NUEVAS:
    - [    23] : INC HL
    - [    2B] : DEC HL
    - [    76] : HALT
+   - [C3####] : JP ####
 
     INC B / DEC B?
    - [11####] : LD DE, ####
