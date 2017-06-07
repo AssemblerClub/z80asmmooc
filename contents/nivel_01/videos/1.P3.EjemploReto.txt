@@ -1,0 +1,38 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+EJEMPLO: Resolución del Reto 1.1. Pintar un píxel rojo al comienzo de la pantalla.
+
+   - INTRODUCCIÓN AL VÍDEO
+
+   - MOSTRAR WINAPE
+      - Abrir el depurador
+      - Explicar lo que sucede
+      - Explicar las partes del depurador
+         - Memoria y CPU: Las dos partes principales
+
+   - NAVEGAR LA MEMORIA
+      - Indicar que está en hexadecimal
+      - Mostrar partes principales: volcado y desensamblado
+      - Mostrar la CPU: Indicar que almacena datos temporalmente
+
+   - INTRODUCIR EL PROGRAMA PARA RESOLVER EL RETO
+      - Objetivo: Cambiar el color de un píxel
+      - Cómo se hace: Cambiando un valor en la memoria de vídeo 
+         - Debemos poner el valor 88 en la posición C000 (Hexadecimal)
+         - Referenciar vídeos que explican la teoría.
+      - 3 Instrucciones:
+         - Guardar el valor que queremos temporalmente en la CPU
+         - Copiarlo de la CPU a la memoria de vídeo
+         - Quedarse quieto, sin hacer nada más.
+      - Programa: 3E 88 32 00 C0 18 FE
+      - Introducir el programa
+      - Cambiar el PC para que se ejecute
+         - Program Counter: Indica siguiente instrucción que ejecutará la CPU
+         - Referenciar vídeo explicativo
+      ?? - Mostrar Desensamblado
+      ??   - Indicar qué es y que se explicará más adelante
+
+   - EJECUTAR EL PROGRAMA
+   
