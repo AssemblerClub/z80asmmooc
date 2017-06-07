@@ -7,26 +7,30 @@
    - Dibujar un sprite en pantalla.
    - Empezar pintando píxeles, cambiando colores y posicionando
 
-1.P2) EJEMPLO PIXEL
-   - Solución del reto 1.1. a modo de ejemplo. Introducción al uso de
-   WinAPE y la solución de Retos.
+1.P2) INSTALAR WINAPE
+   - Windows/Linux/Mac OSX
+   - Un vídeo para cada sistema
+   - 1.P2W, P2L, P2M
+
+1.P3) EJEMPLO PIXEL
+   - Solución del reto 1.1. a modo de ejemplo. Introducción al uso de WinAPE y la solución de Retos.
    - Introducción instrucciones 3E, 21 y 18
 
-1.P3) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
+1.P4) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
 
-1.P4) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
+1.P5) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
 
-1.P5) EJEMPLO PIXELES EN PANTALLA
+1.P6) EJEMPLO PIXELES EN PANTALLA
    - Se muestra como pintar píxeles en pantalla sin calcular posiciones,
    pintando aleatoriamente. Se indica que conocer el formato permite 
    pintar donde uno quiere y se remite a teoría.
    - Introducción instrucciones 32 y 22
 
-1.P6) PRESENTACIÓN RETO "POSICIONA PÍXELES EN PANTALLA"
+1.P7) PRESENTACIÓN RETO "POSICIONA PÍXELES EN PANTALLA"
 
-1.P7) PRESENTACIÓN RETO "DOMINA LA DISTRIBUCIÓN DE LA MEMORIA DE VÍDEO"
+1.P8) PRESENTACIÓN RETO "DOMINA LA DISTRIBUCIÓN DE LA MEMORIA DE VÍDEO"
 
-1.P8) PRESENTACIÓN RETO MAESTRO "DIBUJA UN SPRITE EN PANTALLA"
+1.P9) PRESENTACIÓN RETO MAESTRO "DIBUJA UN SPRITE EN PANTALLA"
 
 ========================================================================
 == VIDEOS -TEORÍA-
