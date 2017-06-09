@@ -5,15 +5,22 @@
 EJEMPLO: Resolución del Reto 1.1. Pintar un píxel rojo al comienzo de la pantalla.
 
    - INTRODUCCIÓN AL VÍDEO
+       - Vamos a introducir nuestro primer programa en el emulador de Amstrad CPC. Voy a explicarlo de forma practica, sin detenerme en los detalles teoricos. Hay varios videos de teoria que explican con detalle como funciona este ejemplo. Puedes consultarlos para entenderlo mejor.
 
    - MOSTRAR WINAPE
-      - Abrir el depurador
-      - Explicar lo que sucede
+   		  - Empezamos ejecutando WinAPE en nuestro ordenador. Yo utilizo Linux como Sistema Operativo, pero WinAPE funcionara igual en Windows y MacOSX.
+   		  - WinAPE se comporta exactamente igual que un Amstrad CPC real. La ventaja es que no es un ordenador, sino un programa. Esto nos permite cosas como parar la ejecucion, ver como esta todo por dentro del ordenador e incluso modificarlo. Esto no podriamos hacerlo igual en un CPC real, asi que vamos a aprovechar esta ventaja.
+      - Abrimos el Depurador (Explicacion de como se hace).
+         - El depurador es lo que nos permite ver y modificar el estado interno. 
       - Explicar las partes del depurador
          - Memoria y CPU: Las dos partes principales
+      	   - Todos los datos que aparcen es lo que hay ahora mismo dentro de nuestro ordenador emulado. Vamos por partes. A la izquierda podemos ver el contenido de la memoria del ordenador. Las 2 ventanas muestran la memoria, solo que de distinta forma. La parte de abajo se llama volcado de memoria y en ella vemos lo que hay en la memoria en crudo: los numeros indican lo que contiene. La parte de arriba se llama desensamblado y muestra el contenido de la memoria interpretado como instrucciones de programa. No te preocupes ahora, iremos viendo como funciona todo esto.
+      	   - Arriba a la derecha vemos el estado de la CPU, del procesador. Aparecen varios espacios con valores. A esto se le llama los Registros y son pequeñas memorias internas del procesador que utiliza para poder almacenar datos temporalmente y operar con ellos (hacer calculos y tomar decisiones, principalmente).
+      	   - Las demas partes no nos van a preocupar por ahora. Las iremos viendo conforme avancemos con nuestros programas. No hay prisa.
 
    - NAVEGAR LA MEMORIA
       - Indicar que está en hexadecimal
+         - Si miramos los datos en memoria y en la CPU, veremos que esta todo en sistema numerico hexadecimal. Los ordenadores realmente operan en binario, pero la informacion se muestra en hexadecimal porque es mas comodo para nosotros. 
       - Mostrar partes principales: volcado y desensamblado
       - Mostrar la CPU: Indicar que almacena datos temporalmente
 
@@ -35,4 +42,3 @@ EJEMPLO: Resolución del Reto 1.1. Pintar un píxel rojo al comienzo de la panta
       ??   - Indicar qué es y que se explicará más adelante
 
    - EJECUTAR EL PROGRAMA
-   
