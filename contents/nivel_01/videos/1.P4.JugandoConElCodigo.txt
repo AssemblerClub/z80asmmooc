@@ -1,0 +1,18 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+OBJETIVO: Enseñar al usuario a jugar con el código, a experimentar, a probar y a aprender de los resultados.
+
+   - MOTTO:
+      - La práctica es lo más importante. Practicando pones a prueba lo que entiendes para ver si se ajusta a la realidad y aprendes cuando no es así. Practica primero, y después te será más fácil y claro entender las explicaciones teóricas.
+
+   - PASOS:
+      - Analizar el código (Partes e instrucciones)
+      - Ejecución paso a paso
+      - Cambiar datos (88, C000)
+      - Añadir nuevas instrucciones
+
+   - Experimentar, ver que sucede, practicar
+      - Así es como se aprende, poniendo a prueba lo que crees respecto a la realidad.
+

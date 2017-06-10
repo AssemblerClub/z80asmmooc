@@ -16,6 +16,9 @@
    - Solución del reto 1.1. a modo de ejemplo. Introducción al uso de WinAPE y la solución de Retos.
    - Introducción instrucciones 3E, 21 y 18
 
+1.P4) JUGANDO CON EL CÓDIGO
+   - Con base en el reto de ejemplo 1.1. explicar cómo practicar con el código para aprender y entender cómo funcionan las cosas.
+
 1.P4) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
 
 1.P5) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
