@@ -19,21 +19,26 @@
 1.P4) JUGANDO CON EL CÓDIGO
    - Con base en el reto de ejemplo 1.1. explicar cómo practicar con el código para aprender y entender cómo funcionan las cosas.
 
-1.P4) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
+1.P5) EJECUTANDO PASO A PASO
+   - Explicación del funcionamiento de la ejecución paso a paso en el depurador de WinAPE. 
+   - Algunos detalles sobre cómo copiar y pegar en la memoria de WinAPE
+   - Añadir instrucciones a los programas manualmente.
 
-1.P5) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
+1.P6) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
 
-1.P6) EJEMPLO PIXELES EN PANTALLA
+1.P7) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
+
+1.P8) EJEMPLO PIXELES EN PANTALLA
    - Se muestra como pintar píxeles en pantalla sin calcular posiciones,
    pintando aleatoriamente. Se indica que conocer el formato permite 
    pintar donde uno quiere y se remite a teoría.
    - Introducción instrucciones 32 y 22
 
-1.P7) PRESENTACIÓN RETO "POSICIONA PÍXELES EN PANTALLA"
+1.P9) PRESENTACIÓN RETO "POSICIONA PÍXELES EN PANTALLA"
 
-1.P8) PRESENTACIÓN RETO "DOMINA LA DISTRIBUCIÓN DE LA MEMORIA DE VÍDEO"
+1.P10) PRESENTACIÓN RETO "DOMINA LA DISTRIBUCIÓN DE LA MEMORIA DE VÍDEO"
 
-1.P9) PRESENTACIÓN RETO MAESTRO "DIBUJA UN SPRITE EN PANTALLA"
+1.P11) PRESENTACIÓN RETO MAESTRO "DIBUJA UN SPRITE EN PANTALLA"
 
 ========================================================================
 == VIDEOS -TEORÍA-

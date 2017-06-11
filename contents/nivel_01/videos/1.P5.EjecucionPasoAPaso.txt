@@ -1,0 +1,20 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+OBJETIVO: Enseñar al usuario a ejecutar paso a paso para poder entender lo que hace el código.
+
+   - MOTTO:
+      - Analizar el comportamiento de los programas paso a paso es lo que nos permite entenderlo y dominar el contexto de ejecución, la máquina.
+
+   - PASOS:
+      - Ejecución paso a paso
+      - Practicar añadiendo nuevas instrucciones al programa
+      - Ejecutar paso a paso y comprobar
+
+   - PROGRAMA: 
+      - Inicial:     3E 88, 32 00 C0, 18 FE
+      - Modificado:  3E 88, 3E 35, 32 00 C0, 18 FE
+      - Modificado:  3E 88, 32 00 C0, 18 FE, 3E 35, 32 01 C0
+      - Modificado:  3E 88, 32 00 C0, 3E 35, 32 01 C0, 18 FE
+
