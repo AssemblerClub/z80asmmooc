@@ -1,0 +1,21 @@
+========================================================================
+== CONTENIDO DEL VIDEO
+========================================================================
+
+0.4) EVALUACIÓN
+   - Curso autoevaluado
+      - Sabrás cuándo has superado un reto y un desafío
+      - Puedes saber si está resuelto por el propio resultado.
+      - Alcanza el nivel de dominio que quieras
+
+   - Resuelve los retos a tu estilo. 
+      - No hay una solución única
+      - Puedes alterar el orden a tu gusto.
+      - Ve más allá: si quieres dominar, tienes que practicar mucho.
+
+   - Consejo: Sigue tu propio ritmo
+         - Principal:   Realizar los retos
+         - El órden es lógico, pero no importa. Importa más divertirse.
+   
+   - Portfolio
+      - Implementa un juego con lo que aprendas. Ese es el mejor certificado que puedes obtener.
