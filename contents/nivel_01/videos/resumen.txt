@@ -26,7 +26,8 @@
 
 1.P6) PRESENTACIÓN RETO "UTILIZA LOS COLORES"
    
-1.P7) EJEMPLO PARA INTRODUCIR LA INSTRUCCIÓN 21   
+1.P7) EJEMPLO: De 2 En 2
+   - Introducción de las instrucciones 21 y 22
 
 1.P8) PRESENTACIÓN RETO "DOMINA EL FORMATO DE PÍXELES Y COLORES"
 
@@ -34,7 +35,6 @@
    - Se muestra como pintar píxeles en pantalla sin calcular posiciones,
    pintando aleatoriamente. Se indica que conocer el formato permite 
    pintar donde uno quiere y se remite a teoría.
-   - Introducción instrucciones 32 y 22
 
 1.P10) PRESENTACIÓN RETO "POSICIONA PÍXELES EN PANTALLA"
 
