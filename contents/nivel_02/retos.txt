@@ -40,7 +40,12 @@ OBJETIVOS:
       2.1, producir una animación de vaivén, parecida a la del panel frontal del 
       coche fantástico, en un rango de 20 píxeles de ancho.
 
- 2.3. [C] Animar un sprite de 4x1 píxeles para que rebote como una pelota
+ 2.3. [C] Animar un sprite que tenga cómo mínimo 4x4 píxeles y 4 fotogramas. La 
+      animación debe reproducirse en bucle infinito y de un fotograma al 
+      siguiente debe haber al menos medio segundo.
+
+>>> Quizá no. Usar para siguiente apartado, en su caso.
+>>> 2.3. [C] Animar un sprite de 4x1 píxeles para que rebote como una pelota
       sobre el lateral izquierdo de la pantalla. Se puede hacer infinito o
       hasta pararse.
 
