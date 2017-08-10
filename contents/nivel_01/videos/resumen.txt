@@ -50,40 +50,51 @@
    - Entender el funcionamiento de procesador y memoria
    - Entender secuencialidad de instrucciones
 
-1.T2) EXPLICACIÓN FUNCIONAMIENTO DE LA MEMORIA
-   - Base: Biestables, binario
-   - Agrupación en Bytes
-   - Distribución en una matriz
-   - Lectura / Escritura
-   - Direcciones lineales
-
-1.T3) EXPLICACIÓN DE NUMERACIÓN BINARIA
+1.T2) EXPLICACIÓN DE NUMERACIÓN BINARIA
    - Los números binarios, 0-1
    - Contar en binario
    - Conversión sencilla a decimal
    - Entendiendo el significado
 
-1.T4) EXPLICACIÓN DE NUMERACIÓN HEXADECIMAL
+1.T3) EXPLICACIÓN DE NUMERACIÓN HEXADECIMAL
    - Los dígitos hexadecimales 0-F
    - ¿Por qué hexadecimal?
    - Conversión Binario-Hex y viceversa
 
-1.T5) EXPLICACIÓN CONCEPTO MEMORIA DE VÍDEO
+1.T4) EXPLICACIÓN CONCEPTO MEMORIA DE VÍDEO
    - Se almacena la pantalla en memoria
    - Un chip (CRTC) la transmite a la pantalla
    - Si se modifica la memoria, se ve en pantalla
    - Memoria compartida y exclusiva
 
-1.T6) EXPLICACIÓN FORMATO DE PÍXELES EN PANTALLA
+1.T5) EXPLICACIÓN FORMATO DE PÍXELES EN PANTALLA
    - Necesidad de 2 bits por cada píxel
    - Cada byte tiene 4 colores
    - Distribución de los bits 
    - Uso de hexadecimal 
 
-1.T7) EXPLICACIÓN DISTRIBUCIÓN MEMORIA DE VÍDEO
+1.T6) EXPLICACIÓN DISTRIBUCIÓN MEMORIA DE VÍDEO
    - Contiguidad de los píxeles y bytes
    - Caracteres y Píxeles
    - 8 líneas de píxeles
+
+1.T7) EXPLICACIÓN DE LAS INSTRUCCIONES SUGERIDAS EN ESTE NIVEL
+   - clrhome.org/table
+   - 3E ##     - LD  A, ##
+   - 32 ####   - LD (####), A
+   - 21 ##     - LD HL, ##
+   - 22 ####   - LD (####), HL
+   - 18 ##     - JR ##
+
+**************************************************
+Eliminado por ahora
+**************************************************
+1.TX) EXPLICACIÓN FUNCIONAMIENTO DE LA MEMORIA
+   - Base: Biestables, binario
+   - Agrupación en Bytes
+   - Distribución en una matriz
+   - Lectura / Escritura
+   - Direcciones lineales
 
 ========================================================================
 == VIDEOS -APRENDIZAJE-
