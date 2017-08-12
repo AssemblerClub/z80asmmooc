@@ -1,0 +1,71 @@
+========================================================================
+== VIDEOS -PRACTICA-
+========================================================================
+
+1.P1) INTRO
+   - Presentación de objetivos del nivel.
+   - Dibujar elementos repetidos en pantalla
+   - Crear animaciones con:
+      - fotogramas
+      - patrones de repetición
+
+1.P2) EJEMPLO PIXEL MOVIÉNDOSE
+   - Solución del reto 1.1.
+   - Explicación del problema de modificar la memoria muy rápido
+   - Introducción a la instrucción 76 (HALT) para poder hacer esperas
+
+1.P3) PRESENTACIÓN DEL RETO 1. "ANIMACIONES POR FOTOGRAMAS"
+   
+
+1.P4) REPETICIÓN DE CÓDIGO (?????)
+   - Demasiados 76 en el código que se repite
+   - Utilizar el flujo de ejecución para causar la repetición
+   - Necesidad de un contador para la repetición
+   - Introducción de instrucciones 3D (DEC A) y 20 (JR NZ, ##)
+   - Creación de un bucle de espera
+
+1.P5) PRESENTACIÓN DEL RETO 2. "ANIMACIONES EN MOVIMIENTO"
+
+1.P6) POSICIÓN ESTÁTICA VS POSICIÓN VARIABLE
+   - El problema de estar dibujando los fotogramas en posiciones exactas de pantalla
+   - Cómo hacer que una posición varíe para dibujar en distintos sitios
+
+1.P7) PRESENTACIÓN DEL RETO 3. "DIBUJOS TILEADOS Y ANIMACIONES CON LARGOS MOVIMIENTOS"
+   
+1.P8) PRESENTACIÓN DEL RETO 4. "DOMINA LAS REPETICIONES CON TUS ANIMACIONES"
+
+1.P9) PRESENTACIÓN DEL DESAFÍO. "CREA UNA ANIMACION CON PATRONES DE MOVIMIENTO"
+
+
+========================================================================
+== VIDEOS -TEORÍA-
+========================================================================
+
+1.T1) EXPLICACIÓN DEL RASTER
+   - Funcionamiento del raster de una pantalla CRT
+   - Relación con la memoria de vídeo
+   - Visualización del mismo en WinAPE
+   - Visualización de las interrupciones
+   - Problemas de dibujado debidos al raster
+
+1.T2) BUCLES, REPETICIONES Y CONTADORES
+   - Explicación de qué es un bucle
+   - Uso de contadores para la creación de bucles
+   - El registro de los flags y el estado
+   - Instrucciones de código máquina para implementar bucles
+
+1.T3) REGISTROS Y VARIABLES: ALMACENAMIENTO DE DATOS
+   - Los registros como variables temporales
+   - Datos que varían en el tiempo y que hay que actualizar
+   - Uso de operaciones aritméticas para actualizar los datos
+      - Incrementos/Decrementos
+      - Sumas/Restas (8/16 bits)
+
+1.T4) EXPLICACIÓN DE LAS INSTRUCCIONES SUGERIDAS EN ESTE NIVEL
+   - xxxxxx
+
+
+========================================================================
+== VIDEOS -APRENDIZAJE-
+========================================================================
+
