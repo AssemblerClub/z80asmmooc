@@ -17,9 +17,9 @@ OBJETIVOS:
 == RETOS
 ========================================================================
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 1: Mover píxeles %%%% (Descubrir la utilidad de los bucles)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 1: Pequeña animación %%%% (Descubrir la utilidad de los bucles)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  1.1. [EJ] Animar un píxel rojo que se mueva cíclicamente por los 4 primeros
       píxeles de la pantalla.
@@ -33,9 +33,9 @@ OBJETIVOS:
       animación debe reproducirse en bucle infinito y de un fotograma al 
       siguiente debe haber al menos medio segundo.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 2: Mover pixeles por la pantalla %%%% (Usando bucles)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 2: Pelota en movimiento, con velocidad variable %%%% (Usando bucles)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  2.1. [EJ] Animar un grupo de 4 píxeles del mismo color. Moverlo a la derecha
       de 4 en 4 píxeles. Realizar 5 fotogramas. Debe haber 1/3s de espera entre fotogramas. Repetir infinito.
@@ -47,11 +47,11 @@ OBJETIVOS:
  2.3. [C] Haz una animación de una pelota de tamaño 4x4 píxeles, que rebote sobre
       la letra A de la palabra Amstrad. La pelota se movera arriba y abajo pero sin salir de las 8 primeras líneas de píxeles de pantalla. La animación debe repetirse infinitamente. Juega con los tiempos de espera para simular la aceleración de la pelota al caer (menos espera para que se mueva más rápido).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 3: Utilizar posiciones variables %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 3: Dibujos tileados y animaciones largas %%%% (Posiciones variables)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  3.1. [C] Dibuja un ladrillo de 4x4 píxeles debajo de la A de Amstrad. Utiliza la instrucción 36 para modificar la memoria de vídeo.
+  3.1. [C] Dibuja un ladrillo de 4x4 píxeles debajo de la A de Amstrad (fila 3 de caracteres). Utiliza la instrucción 36 para modificar la memoria de vídeo.
 
   3.2. [C] Utilizando el ladrillo que has diseñado en la actividad 3.1., dibuja un suelo que ocupe toda la pantalla, de izquierda a derecha, en las misma 4 fílas en que has dibujado el ladrillo.
 
@@ -60,19 +60,47 @@ OBJETIVOS:
   3.4. [C] Dibuja un personaje o lo que imagines, con un tamaño 8x8 píxeles que disponga de un arma (pistola o similar). Después, haz una animación de disparo de una bala que salga del arma en línea recta y llegue hasta el final de la pantalla. En el final de la pantalla, haz una pequeña animación de explosión de la bala disparada. Añade el código al de las actividades 3.2. y 3.3., situando al personaje a la izquierda y haciendo que la bala vaya de izquierda a derecha. 
     Bonus por usar instrucciones 23 y 2B.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 4: ----------------------------- %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 4: Repeticiones espaciadas y múltiples %%%% (varios bucles de repetición, con posiciones variables)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-TODO
- 
-*******************************************
-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
-*%%%% RETO MAESTRO: ----------------- %%%%*
-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
-*******************************************
+  4.1. [C] Crea 2 tipos de ladrillos de 4x4 píxeles. Dibuja un suelo como el de la actividad 3.2. pero con la siguiente distribución: después de cada 9 ladrillos del tipo 1, pinta uno del tipo 2: 111111111211111111121111111112.....
 
-TODO: Animación completa
+  4.2. [C] Dibuja al menos 21 enemigos, de 3 tipos distintos, de 8x8 píxeles cada uno, todos seguidos, separados al menos 10 bytes de distancia del personaje principal. Los enemigos deben formar una secuencia simple 123123123123... 
+
+  4.3. [C] Crea una animación en la que los enemigos avancen hacia el personaje principal. Los enemigos deben avanzar 4 píxeles (1 byte) cada medio segundo. Todos los enemigos se moverán a la vez, en cada paso, 1 byte hacia la izquierda.
+
+******************************************
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*%%%% DESAFIO: Escenario y animación %%%%*
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+******************************************
+
+- Animación completa que debe contener los siguientes elementos, como mínimo:
+   - Una entidad/personaje principal con un arma. Mínimo 8x8 píxeles.
+   - Un suelo y cielo que deben ir de izquierda a derecha de la pantalla
+   - El suelo debe ser mínimo de 4 píxeles de alto, el cielo de 8.
+   - 3 tipos distintos de enemigos (personajes o entidades). Mínimo 8x8 píxeles cada enemigo.
+   - Los enemigos deben colocarse todos juntos, lejos del personaje principal.
+   - El personaje principal debe disparar un proyectil (mínimo 4x1 píxeles) hacia los enemigos.
+   - Al impactar el proyectil en el primer enemigo, debe explotar, haciendo desaparecer al enemigo.
+   - A continuación, los enemigos irán explotando en cadena uno por uno, en orden, y desapareciendo.
+   - Al terminar, el personaje principal debe cambiar a una pose de victoria.
+
+- Se pueden hacer animaciones distintas que contengan elementos similares.
+
+*****************************************************************************
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*%%%% DESAFIO ADICIONAL: Crea una animación para un logotipo de entrada %%%%*
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*****************************************************************************
+
+- Diseña un logotipo de tu marca de desarrollo de videojuegos.
+- Crea una animación de aparición del mismo en pantalla:
+   - Haz que las letras entren con desplazamientos
+   - Haz otras letras que aparezcan de varios en varios píxeles (usa fotogramas)
+   - Crea y combina diversos movimientos o efectos. Sé creativo.
+
 
 ========================================================================
 == INSTRUCCIONES 
