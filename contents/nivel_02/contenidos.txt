@@ -18,18 +18,20 @@
 
 1.P4) PRESENTACIÓN DEL RETO 2. "ANIMACIONES EN MOVIMIENTO"
 
-1.P5) REPETICIÓN DE CÓDIGO (?????)
-   - Demasiados 76 en el código que se repite
+1.P5) PRACTICA: REPETICIONES
+   - Necesidad de crear repeticiones limitadas
+   - Ejemplo: alarma que se repite un tiempo
    - Utilizar el flujo de ejecución para causar la repetición
    - Necesidad de un contador para la repetición
    - Introducción de instrucciones 3D (DEC A) y 20 (JR NZ, ##)
-   - Creación de un bucle de espera
+   - Creación de bucles, explicación de funcionamiento
+   - Sugerencia de crear un bucle con lo demás
 
-1.P6) POSICIÓN ESTÁTICA VS POSICIÓN VARIABLE
+1.P6) PRESENTACIÓN DEL RETO 3. "DIBUJOS TILEADOS Y ANIMACIONES CON LARGOS MOVIMIENTOS"
+
+1.P7) PRÁCTICA: POSICIÓN VARIABLE
    - El problema de estar dibujando los fotogramas en posiciones exactas de pantalla
    - Cómo hacer que una posición varíe para dibujar en distintos sitios
-
-1.P7) PRESENTACIÓN DEL RETO 3. "DIBUJOS TILEADOS Y ANIMACIONES CON LARGOS MOVIMIENTOS"
    
 1.P8) PRESENTACIÓN DEL RETO 4. "DOMINA LAS REPETICIONES CON TUS ANIMACIONES"
 
