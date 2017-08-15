@@ -37,15 +37,24 @@ OBJETIVOS:
 %%%% Reto 2: Pelota en movimiento, con velocidad variable %%%% (Usando bucles)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- 2.1. [EJ] Animar un grupo de 4 píxeles del mismo color. Moverlo a la derecha
-      de 4 en 4 píxeles. Realizar 5 fotogramas. Debe haber 1/3s de espera entre fotogramas. Repetir infinito.
+ 2.1. [EJ] Animar el disparo de un pequeño laser que ocupará 4 píxeles consecutivos. 
+      Moverlo a la derecha de 4 en 4 píxeles. Realizar mínimo 5 fotogramas. Cada 
+      fotograma debe durar al menos 0.3s en pantalla. Hacer que la animación se 
+      repita indefinidamente. 
+      [Bonus] por usar instrucciones 21 y 22 para dibujar.
 
- 2.2. [EJ] Continuando con la animación de mover de 4 en 4 píxeles del ejercicio 
-      2.1, producir una animación de vaivén, parecida a la del panel frontal del 
-      coche fantástico, en un rango de 20 píxeles de ancho.
+ 2.2. [C] Animar una trampa aplastadora. Dibuja una viga de 4x2 píxeles y un brazo
+      mecánico de al menos 16x2 píxeles. Anima el brazo para que se contraiga y 
+      expanda, representando una trampa aplastadora. La animación debe tener 
+      al menos 6 fotogramas (3 de contracción y 3 de expansión)
+      [Bonus] si es más grande y/o tiene más fotogramas. 
+      [Bonus] si el código ocupa menos de 32 bytes por fotograma.
 
  2.3. [C] Haz una animación de una pelota de tamaño 4x4 píxeles, que rebote sobre
-      la letra A de la palabra Amstrad. La pelota se movera arriba y abajo pero sin salir de las 8 primeras líneas de píxeles de pantalla. La animación debe repetirse infinitamente. Juega con los tiempos de espera para simular la aceleración de la pelota al caer (menos espera para que se mueva más rápido).
+      la letra A de la palabra Amstrad. La pelota se movera arriba y abajo pero 
+      sin salir de las 8 primeras líneas de píxeles de pantalla. La animación 
+      debe repetirse infinitamente. Juega con los tiempos de espera para simular 
+      la aceleración de la pelota al caer (menos espera para que se mueva más rápido).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 3: Dibujos tileados y animaciones largas %%%% (Posiciones variables)
