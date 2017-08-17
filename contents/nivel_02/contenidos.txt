@@ -37,6 +37,9 @@
 
 1.P9) PRESENTACIÓN DEL DESAFÍO. "CREA UNA ANIMACION CON PATRONES DE MOVIMIENTO"
 
+1.P10) TRUCO DE DEPURACIÓN VISUAL CON WINAPE
+   - Uso del visualizador de gráficos
+   - Actualización "quasi" inmediata del visualizador
 
 ========================================================================
 == VIDEOS -TEORÍA-
