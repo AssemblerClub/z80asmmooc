@@ -9,12 +9,21 @@ OBJETIVOS:
    - Conocer el editor y ensamblador integrado de WinAPE
    - Entender que el ensamblador es un programa que traduce a código máquina
    - Entender que hay muchos programas que hacen eso y pueden tener sintaxis diferentes
+   - Entender qué son directivas para el programa ensamblador y para qué sirven
    - Entender el funcionamiento de las etiquetas y su uso en ensamblador
    - Entender el funcionamiento de la órden Call y la creación de subrutinas
    - Entender el funcionamiento de los flags y crear saltos condicionales
    - Entender qué es el firmware y cómo funciona a nivel básico
    - Aprender el funcionamiento de la función BB1E (KM_TEST_KEY) del firmware
-   -
+
+
+RETOS POSIBLES:
+   - Dibujar un mismo sprite en múltiples posiciones elegidas manualmente (a mano, y con call)
+   - Dibujar un suelo prediseñado copiándolo desde datos (una recta de colores)
+   - Dibujar un tile cualquiera alineado al carácter (copiando los datos)
+   - Dibujar un mapa de tiles alineados al carácter
+   - Iniciar alguna de nuestras animaciones al pulsar una tecla
+   - Mover un sprite de posición ante la pulsación de una tecla, sólo en una dirección
 
 ========================================================================
 == RETOS
