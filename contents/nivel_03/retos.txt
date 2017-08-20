@@ -11,6 +11,7 @@ OBJETIVOS:
    - Entender que hay muchos programas que hacen eso y pueden tener sintaxis diferentes
    - Entender qué son directivas para el programa ensamblador y para qué sirven
    - Entender el funcionamiento de las etiquetas y su uso en ensamblador
+   - Aprender a usar db y dw para añadir bytes directamente al código resultante
    - Entender el funcionamiento de la órden Call y la creación de subrutinas
    - Entender el funcionamiento de los flags y crear saltos condicionales
    - Entender qué es el firmware y cómo funciona a nivel básico
