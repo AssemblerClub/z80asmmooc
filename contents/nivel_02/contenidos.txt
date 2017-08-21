@@ -2,23 +2,23 @@
 == VIDEOS -PRACTICA-
 ========================================================================
 
-1.P1) INTRO
+2.P1) INTRO
    - Presentación de objetivos del nivel.
    - Dibujar elementos repetidos en pantalla
    - Crear animaciones con:
       - fotogramas
       - patrones de repetición
 
-1.P2) PRESENTACIÓN DEL RETO 1. "ANIMACIONES POR FOTOGRAMAS"
+2.P2) PRESENTACIÓN DEL RETO 1. "ANIMACIONES POR FOTOGRAMAS"
 
-1.P3) EJEMPLO PIXEL MOVIÉNDOSE
+2.P3) EJEMPLO PIXEL MOVIÉNDOSE
    - Solución del reto 1.1.
    - Explicación del problema de modificar la memoria muy rápido
    - Introducción a la instrucción 76 (HALT) para poder hacer esperas
 
-1.P4) PRESENTACIÓN DEL RETO 2. "ANIMACIONES EN MOVIMIENTO"
+2.P4) PRESENTACIÓN DEL RETO 2. "ANIMACIONES EN MOVIMIENTO"
 
-1.P5) PRACTICA: REPETICIONES
+2.P5) PRACTICA: REPETICIONES
    - Necesidad de crear repeticiones limitadas
    - Ejemplo: alarma que se repite un tiempo
    - Utilizar el flujo de ejecución para causar la repetición
@@ -27,17 +27,17 @@
    - Creación de bucles, explicación de funcionamiento
    - Sugerencia de crear un bucle con lo demás
 
-1.P6) PRESENTACIÓN DEL RETO 3. "DIBUJOS TILEADOS Y ANIMACIONES CON LARGOS MOVIMIENTOS"
+2.P6) PRESENTACIÓN DEL RETO 3. "DIBUJOS TILEADOS Y ANIMACIONES CON LARGOS MOVIMIENTOS"
 
-1.P7) PRÁCTICA: POSICIÓN VARIABLE
+2.P7) PRÁCTICA: POSICIÓN VARIABLE
    - El problema de estar dibujando los fotogramas en posiciones exactas de pantalla
    - Cómo hacer que una posición varíe para dibujar en distintos sitios
    
-1.P8) PRESENTACIÓN DEL RETO 4. "DOMINA LAS REPETICIONES CON TUS ANIMACIONES"
+2.P8) PRESENTACIÓN DEL RETO 4. "DOMINA LAS REPETICIONES CON TUS ANIMACIONES"
 
-1.P9) PRESENTACIÓN DEL DESAFÍO. "CREA UNA ANIMACION CON PATRONES DE MOVIMIENTO"
+2.P9) PRESENTACIÓN DEL DESAFÍO. "CREA UNA ANIMACION CON PATRONES DE MOVIMIENTO"
 
-1.P10) TRUCO DE DEPURACIÓN VISUAL CON WINAPE
+2.P10) TRUCO DE DEPURACIÓN VISUAL CON WINAPE
    - Uso del visualizador de gráficos
    - Actualización "quasi" inmediata del visualizador
 
@@ -45,39 +45,39 @@
 == VIDEOS -TEORÍA-
 ========================================================================
 
-1.T1) TEMPORALIZACIÓN E INTERRUPCIONES
+2.T1) TEMPORALIZACIÓN E INTERRUPCIONES
    - Funcionamiento del Z80 y las interrupciones
    - Generación de interrupciones en Amstrad CPC
    - Uso de las interrupciones para contar tiempo
    - Visualización de las interrupciones
 
-1.T2) EXPLICACIÓN DEL RASTER
+2.T2) EXPLICACIÓN DEL RASTER
    - Funcionamiento del raster de una pantalla CRT
    - Relación con la memoria de vídeo
    - Visualización del mismo en WinAPE
    - Problemas de dibujado debidos al raster
 
-1.T3) NÚMEROS NEGATIVOS Y POSITIVOS (I)
+2.T3) NÚMEROS NEGATIVOS Y POSITIVOS (I)
    - Los números no tienen signo por defecto
    - Explicación de los números negativos
    - El complemento a 2
    - Uso de los números negativos (saltos relativos)
    - Utilidad del complemento a 2 al sumar
 
-1.T4) BUCLES, REPETICIONES Y CONTADORES
+2.T4) BUCLES, REPETICIONES Y CONTADORES ----- PROBLEMA DE AUDIO -- REPETIR -----
    - Explicación de qué es un bucle
    - Uso de contadores para la creación de bucles
    - El registro de los flags y el estado
    - Instrucciones de código máquina para implementar bucles
 
-1.T5) REGISTROS Y VARIABLES: ALMACENAMIENTO DE DATOS
+2.T5) REGISTROS Y VARIABLES: ALMACENAMIENTO DE DATOS
    - Los registros como variables temporales
    - Datos que varían en el tiempo y que hay que actualizar
    - Uso de operaciones aritméticas para actualizar los datos
       - Incrementos/Decrementos
       - Sumas/Restas (8/16 bits)
 
-1.T6) EXPLICACIÓN DE LAS INSTRUCCIONES SUGERIDAS EN ESTE NIVEL
+2.T6) EXPLICACIÓN DE LAS INSTRUCCIONES SUGERIDAS EN ESTE NIVEL
    - 76        halt
    - C3 ## ##  jp ####
    - -- ##     ld r, ## (06 b, 0E c, 16 d, 1E e, 26 h, 2E l, 3E a)
