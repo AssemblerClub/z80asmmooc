@@ -30,17 +30,38 @@ RETOS POSIBLES:
 == RETOS
 ========================================================================
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 1: Pequeña animación %%%% (Descubrir la utilidad de los bucles)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%         Reto 1: Domina el uso del ensamblador          %%%% 
+%%%% -- Aprender cómo funciona el ensamblador y a usarlo -- %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 2: Pelota en movimiento, con velocidad variable %%%% (Usando bucles)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   1.1. [EJ] Pinta píxeles de colores en ensamblador. Comprobar su conversión a Código Máquina.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 3: Dibujos tileados y animaciones largas %%%% (Posiciones variables)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   1.2. [C] Dibuja una vagoneta de mina en un sprite de 8x8 píxeles. Debe estar dibujado al principio de la fila 12 de caracteres de pantalla (Justo debajo de la R de Ready). 
+
+   1.3. [C] Dibuja un raíl debajo de la vagoneta que llene el ancho de toda la pantalla. Puedes hacer el raíl como quieras. Te recomendamos repetir el dibujado de un Tile de 4x4 píxeles. Bonus: Raíl con patrones.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Reto 2: Aprende a leer el teclado y tomar decisiones  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   2.1. [EJ] Crear una animación que mueva la vagoneta sólo si el registro A contiene el valor 1. En caso de moverla, debe ir desde un extremo hasta el centro del raíl. Bonus: Ralentizar la animación para simular que la vagoneta frena.
+
+   2.2. [EJ] Modificar el Reto 2.1. para hacer que la vagoneta empiece a moverse cuando se pulse la tecla espacio. El programa debe estar esperando hasta que la tecla se pulse.
+
+   2.3. [EJ] Modificar el Reto 2.2. Cuando termine la animación, si se pulsa la letra R, se debe borrar la vagoneta y volver a empezar el programa (esperar otra vez al espacio para moverse). Bonus: Los códigos de dibujado y borrado de vagoneta no deben estar repetidos en el programa. Deben estar una sola vez.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 3: Domina el teclado y las decisiones %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   3.1. [C] Continuando con el programa anterior, dibuja un barril de 4x8 píxeles en mitad de la vía. El dibujado del barril debe ser una Rutina que se llame con Call.
+
+   3.2. [C] Cambia el funcionamiento del programa. La animación debe iniciarse sola tras una espera de unos pocos segundos. Haz que el bucle de espera sea una función que se llame con CALL. La tecla espacio ahora debe detener la vagoneta cuando es pulsada. La tecla R seguirá haciendo de Reset, tras haber detenido la vagoneta. Si no se pulsa espacio, la vagoneta irá hasta justo delante del barril. 
+
+   3.3. [C] Haz que la vagoneta se estrelle contra el barril y explote si llega
+   hasta el y no ha sido frenada pulsando la tecla espacio. Tras la explosión, si
+   el usuario pulsa la tecla R, se reiniciará todo otra vez también. La animación de explosión debe ser una Función, y cada uno de los fotogramas a dibujar también, siendo llamados por la primera.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Reto 4: Repeticiones espaciadas y múltiples %%%% (varios bucles de repetición, con posiciones variables)

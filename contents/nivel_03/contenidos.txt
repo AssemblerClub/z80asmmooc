@@ -2,12 +2,75 @@
 == VIDEOS -PRACTICA-
 ========================================================================
 
-1.P1) INTRO
+3.P01) INTRO
    - Presentación de objetivos del nivel.
+
+3.P02) RETO: PRESENTACIÓN RETO 1
+   - Dominar el editor de ensamblador de WinAPE
+   - Escribir y ensamblar nuestros programas directos a memoria
+
+3.P03) EJEMPLO: SOLUCIÓN AL RETO 1.1.
+   - Explicar cómo funciona el ensamblador de WinAPE
+   - Editar, salvar y ensamblar programas
+   - Explicación básica del proceso de ensamblado
+   - Comprobación de que se ensambla a memoria
+   - Explicación básica de jr $ y qué significa el $
+   - Indicación de que los detalles se explican en un vídeo de teoría
+
+3.P04) PRÁCTICA: Ensamblando con WinAPE
+   - Creando programas simples con WinAPE y ejecutándolos
+   - Utilidad de poner números en binario directamente (píxeles)
+   - Ejecución automatizada con RUN
+   - Errores básicos: No poner los paréntesis a HL, No poner una # o %
+
+3.P05) RETO: PRESENTACIÓN RETO 2
+   - Crear una primera base interactiva para un juego
+
+3.P06) PRÁCTICA: Saltos condicionales y el teclado
+   - Evaluando condiciones y saltando
+   - Ejemplo de cómo utilizar CALL para leer el teclado
+   - Como saber si una tecla se ha pulsado o no, y decidir en consecuencia
+
 
 ========================================================================
 == VIDEOS -TEORÍA-
 ========================================================================
+
+3.T01) TEORIA: Funcionamiento del Ensamblador I
+   - El ensamblador es un programa
+   - Existen muchos programas ensambladores, y pueden tener distinta sintaxis
+   - Procesado de ficheros de Texto
+   - Procesa línea por línea y convierte a código máquina
+   - Conforme genera código, lo hace en una posición de memoria
+   - Errores de ensamblado: Revisión
+   
+3.T02) TEORIA: Funcionamiento del Ensamblador II
+   - Números: Hexadecimal (#), Decimal () y Binario (%)
+   - Símbolos = Etiquetas: Posición de memoria actual (uso de $)
+   - Comentarios: Usos e importancia
+
+3.T03) TEORIA: Funcionamiento del Ensamblador III
+   - Directivas: Órdenes para el programa ensamblador (cambian su comportamiento)
+   - Cambio de la posición de memoria actual con ORG
+   - Ejecución automatizada tras compilación con la directiva RUN
+
+3.T04) TEORIA: La Pila de Programa I: Rutinas y Funciones
+   - ¿Qué es la pila de Programa?
+   - Dónde está ubicada y cómo funciona
+   - Instrucciones CALL y RET. Almacenamiento de la dirección de retorno
+   - Creación de RUTINAS (Funciones)
+   - Rutinas con parámetros (Nivel básico: Dar algo en algún registro)
+
+3.T0X) TEORÍA: Depuración de Programas
+   - Necesidad de depurar los programas
+   - Ejecución paso a paso: revisited
+   - Uso de Breakpoints
+   - Símbolos y la directiva print??
+   - Importancia de ver los datos
+
+- Tabla de símbolos?
+- Uso del visualizador de gráficos de WinAPE?
+
 
 ========================================================================
 == VIDEOS -APRENDIZAJE-
