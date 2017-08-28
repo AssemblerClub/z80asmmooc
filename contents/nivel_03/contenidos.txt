@@ -61,6 +61,13 @@
    - Creación de RUTINAS (Funciones)
    - Rutinas con parámetros (Nivel básico: Dar algo en algún registro)
 
+3.T05) TEORIA: Saltos y Condiciones II
+   - Uso de la instrucción CP
+   - Tipos de comprobaciones que se pueden hacer
+      - Una comprobación con un salto
+      - Varias comprobaciones seguidas con saltos
+      - Uso de una variable para decidir según su valor
+
 3.T0X) TEORÍA: Depuración de Programas
    - Necesidad de depurar los programas
    - Ejecución paso a paso: revisited
@@ -70,7 +77,6 @@
 
 - Tabla de símbolos?
 - Uso del visualizador de gráficos de WinAPE?
-
 
 ========================================================================
 == VIDEOS -APRENDIZAJE-

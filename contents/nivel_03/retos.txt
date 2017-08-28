@@ -55,21 +55,34 @@ RETOS POSIBLES:
 %%%% Reto 3: Domina el teclado y las decisiones %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-   3.1. [C] Continuando con el programa anterior, dibuja un barril de 4x8 píxeles en mitad de la vía. El dibujado del barril debe ser una Rutina que se llame con Call.
+   3.1. [C] Continuando con el programa anterior, dibuja un barril de 4x8 píxeles en mitad de la vía, justo después de donde se detiene la vagoneta. El dibujado del barril debe ser una Rutina que se llame con Call.
 
-   3.2. [C] Cambia el funcionamiento del programa. La animación debe iniciarse sola tras una espera de unos pocos segundos. Haz que el bucle de espera sea una función que se llame con CALL. La tecla espacio ahora debe detener la vagoneta cuando es pulsada. La tecla R seguirá haciendo de Reset, tras haber detenido la vagoneta. Si no se pulsa espacio, la vagoneta irá hasta justo delante del barril. 
+   3.2. [C] Modifica el programa anterior para que se dibujen muchos barriles seguidos. Deben llenar desde la posición del barril primero hasta el final de la vía por la derecha. Bonus: Crear un patrón de tipos de barril. Todos llamados con CALL.
 
-   3.3. [C] Haz que la vagoneta se estrelle contra el barril y explote si llega
+   3.3. [C] Cambia el funcionamiento del programa. La animación debe iniciarse sola tras una espera de unos pocos segundos. Haz que el bucle de espera sea una función que se llame con CALL. La tecla espacio ahora debe detener la vagoneta cuando es pulsada. La tecla R seguirá haciendo de Reset, tras haber detenido la vagoneta. Si no se pulsa espacio, la vagoneta irá hasta justo delante del barril. 
+
+   3.4. [C] Haz que la vagoneta se estrelle contra el barril y explote si llega
    hasta el y no ha sido frenada pulsando la tecla espacio. Tras la explosión, si
    el usuario pulsa la tecla R, se reiniciará todo otra vez también. La animación de explosión debe ser una Función, y cada uno de los fotogramas a dibujar también, siendo llamados por la primera.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Reto 4: Repeticiones espaciadas y múltiples %%%% (varios bucles de repetición, con posiciones variables)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Reto 4: Toma el control del movimiento %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-******************************************
-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
-*%%%% DESAFIO: Escenario y animación %%%%*
-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
-******************************************
+   4.1. [EJ] Modifica el programa anterior para que la vagoneta avance sólo cuando se esté pulsando la letra P. Si está pulsada, la vagoneta avanza, si deja de estarlo, la vagoneta frena. No importa si la vagoneta atraviesa los barriles o se sale de la pantalla.
 
+   4.2. [EJ] Añade al programa anterior el control para mover la vagoneta a la izquierda usando la letra "O". Si pulsas "P" se seguirá moviendo a la derecha, y si pulsas "O" deberá moverse a la izquierda. Bonus: El código para mover a la izquierda o a la derecha en un funciones. Bonus: Añade la "R" para resetear el programa en cualquier momento.
+
+   4.3. [EJ] Añade una condición que impida moverse a la izquierda cuando la vagoneta esté justamente en el borde izquierdo de la pantalla, aunque se esté pulsando la letra O. Bonus: Evitar lo mismo con el borde derecho de la pantalla.
+
+   4.4. [EJ] Pon ahora sólo 2 barriles, cerca de los extremos de la vía. Haz que la vagoneta comience en el centro y puedas moverla libremente con O y P. Pero ahora, si chocas contra un barril, la vagoneta explotará. Bonus: Posiciones de los dos barriles y la vagoneta en variables, modificables.
+
+*****************************************
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*%%%% DESAFIO: Crea tu primer juego %%%%*
+*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
+*****************************************
+
+   Diseña un videojuego en el que puedas moverte a izquierda y derecha sin salir de la pantalla. También debes poder pegar puñetazos o patadas a izquierda y derecha. Tus puñetazos o patadas deben poder destruir personajes u objetos que te impiden pasar, y que te hacen explotar en caso de tocarlos.
+      - Versión 1: Destrúyelos todos para ganar
+      - Versión 2: Coge una llave en un extremo y sal por la puerta en otro extremo
