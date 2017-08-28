@@ -37,7 +37,7 @@ RETOS POSIBLES:
 
    1.1. [EJ] Pinta píxeles de colores en ensamblador. Comprobar su conversión a Código Máquina.
 
-   1.2. [C] Dibuja una vagoneta de mina en un sprite de 8x8 píxeles. Debe estar dibujado al principio de la fila 12 de caracteres de pantalla (Justo debajo de la R de Ready). 
+   1.2. [C] Dibuja una vagoneta de mina en un sprite de 8x8 píxeles. Debe estar dibujado al principio de la fila 12 de caracteres de pantalla (88 en píxeles, 2 debajo del cursor). 
 
    1.3. [C] Dibuja un raíl debajo de la vagoneta que llene el ancho de toda la pantalla. Puedes hacer el raíl como quieras. Te recomendamos repetir el dibujado de un Tile de 4x4 píxeles. Bonus: Raíl con patrones.
 
@@ -84,5 +84,5 @@ RETOS POSIBLES:
 *****************************************
 
    Diseña un videojuego en el que puedas moverte a izquierda y derecha sin salir de la pantalla. También debes poder pegar puñetazos o patadas a izquierda y derecha. Tus puñetazos o patadas deben poder destruir personajes u objetos que te impiden pasar, y que te hacen explotar en caso de tocarlos.
-      - Versión 1: Destrúyelos todos para ganar
+      - Versión 1: Destrúyelos todos para ganar. Mínimo 4 enemigos.
       - Versión 2: Coge una llave en un extremo y sal por la puerta en otro extremo

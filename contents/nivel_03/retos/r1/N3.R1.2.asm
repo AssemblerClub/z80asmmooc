@@ -1,7 +1,7 @@
 org #4000      ;; La generacion de codigo empieza en 4000
 run #4000      ;; Ejecuta en 4000 cuando ensambla
 
-ld hl, #C370   ;; HL Apunta a C2D0 (Fila 10 de pantalla)
+ld hl, #C370   ;; HL Apunta a C370 (Fila 12 de pantalla)
 
 ;; Dibujar un vagon de una mina
 ;; Fila 1

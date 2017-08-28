@@ -28,8 +28,26 @@
 
 3.P06) PRÁCTICA: Saltos condicionales y el teclado
    - Evaluando condiciones y saltando
+   - Ejemplo de dado que se lanza
    - Ejemplo de cómo utilizar CALL para leer el teclado
    - Como saber si una tecla se ha pulsado o no, y decidir en consecuencia
+
+3.P07) RETO: PRESENTACIÓN RETO 3
+   - Dominar el teclado como medio de control
+   - Y la toma de decisiones
+   - Y el CALL
+
+3.P08) PRÁCTICA: Variables en ensamblador
+   - Cómo crear variables
+   - Cómo leer su contenido y actualizarlas
+   - Inicializar las variables
+
+3.P09) RETO: PRESENTACIÓN RETO 4
+   - Toma el control del movimiento con teclado
+   - Controla Colisiones
+
+3.P10) DESAFIO: Crea tu primer minijuego
+   - Juego de destruir barriles o similar
 
 
 ========================================================================
@@ -68,7 +86,7 @@
       - Varias comprobaciones seguidas con saltos
       - Uso de una variable para decidir según su valor
 
-3.T0X) TEORÍA: Depuración de Programas
+3.T06) TEORÍA: Depuración de Programas
    - Necesidad de depurar los programas
    - Ejecución paso a paso: revisited
    - Uso de Breakpoints
