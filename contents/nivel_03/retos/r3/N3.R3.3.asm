@@ -1,17 +1,26 @@
 org #4000      ;; La generacion de codigo empieza en 4000
 run #4000      ;; Ejecuta en 4000 cuando ensambla
    ;;
-   ;; DIBUJAR RAILES Y BARRIL
+   ;; DIBUJAR RAILES
    ;;
    call dibujar_railes  ;; Dibuja los Railes
 
-   reinicio:
-   ld hl, #C39A         ;; Dibujar Barril
-   call dibujar_barril
+   ;;
+   ;; DIBUJAR BARRILES (Barril-Espacio-Barril-Espacio)
+   ;;
+   ld hl, #C39A               ;; Primer Barril en C39A
+   ld  b, 19                  ;; 19 grupos Barril-Espacio
+   bucle_barriles:
+      call dibujar_barril     ;; Dibuja un barril
+      inc  hl                 ;; | Siguiente posición de pantalla
+      inc  hl                 ;; |  Dejando un espacio en blanco
+      dec  b                  ;; Un barril menos por dibujar
+   jr nz, bucle_barriles      ;; Si quedan barriles (B!=0), continuar dibujándolos
 
    ;;
    ;; DIBUJAR VAGONETA
    ;;
+   reinicio:
    ld hl, #C370            ;; HL Apunta a C370 (Fila 12 de pantalla)
    call dibujar_vagoneta   ;; Dibujamos la vagoneta
    
@@ -53,11 +62,8 @@ run #4000      ;; Ejecuta en 4000 cuando ensambla
       dec b                ;; Una repetición menos de la animación
    jr nz, bucle_animacion  ;; Si aún quedan frames de la animación, repetir
 
-   ;; La vagoneta ha chocado con el barril
-   ;; Realizar explosión
-   call  borrar_cuadrado_4x8  ;; Borrar la primera parte de la vagoneta
-   inc   hl                   ;; Apuntar a la segunda parte de la vagoneta
-   call  anima_explosion      ;; Realizar animación de explosión.
+   ;; La animación ha terminado
+   ex   de, hl      ;; Salvar HL en DE
 
    ;;
    ;; ESPERAR PULSACIÓN DE TECLA
@@ -241,195 +247,5 @@ dibujar_barril:
    ld    h, #FB ;; Bajar a Fila 8
    ld (hl), #60 ;; Fila 8
    ld    h, #C3 ;; Volver a Fila 1
-
-   ret
-
-;;============================================================
-;; Dibuja una animación completa de una explosión en 8x8
-;; píxeles en la posición indicada en HL. HL debe estar
-;; en la fila 13 de pantalla (que empieza en C3C0)
-;; ENTRADAS
-;;    HL: Posición donde animar la explosión
-;; MODIFICA
-;;    HL, B
-;;============================================================
-anima_explosion:
-   ;; 1er fotograma + espera
-   call dibujar_fot1_explosion
-   ld   c, #12
-   call espera_halt
-
-   ;; 2o fotograma + espera
-   call dibujar_fot2_explosion
-   ld   c, #12
-   call espera_halt
-
-   ;; 3er fotograma + espera
-   call dibujar_fot3_explosion
-   ld   c, #12
-   call espera_halt
-   
-   ;; Borrar el último fotograma de la explosión
-   call  borrar_cuadrado_4x8  ;; Borrar la primera parte de la explosión
-   inc   hl                   ;; +1 (Apuntar a la segunda parte de la explosión)
-   call  borrar_cuadrado_4x8  ;; Borrar la segunda parte de la explosión
-   ld   c, #12
-   call espera_halt
-
-   ret
-
-;;============================================================
-;; Dibuja el primer fotograma de una explosión de 8x8 píxeles
-;; en la posición actual de HL. HL debe estar en la fila 13
-;; de caracteres de pantalla (que empieza en C3C0)
-;; ENTRADAS
-;;    HL: Puntero a la posición donde dibujar el fotograma
-;; MODIFICA
-;;============================================================
-dibujar_fot1_explosion:
-   ;; Fila 1
-   ld (hl), #80   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #10   ;; Byte Derecho
-   ld    h, #CB   ;; Bajar a Fila 2
-   ;; Fila 2
-   ld (hl), #E2   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #74   ;; Byte Izquierdo
-   ld    h, #D3   ;; Bajar a Fila 3
-   ;; Fila 3
-   ld (hl), #72   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #E4   ;; Byte Derecho
-   ld    h, #DB   ;; Bajar a Fila 4
-   ;; Fila 4
-   ld (hl), #E8   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #71   ;; Byte Izquierdo
-   ld    h, #E3   ;; Bajar a Fila 5
-   ;; Fila 5
-   ld (hl), #71   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #E8   ;; Byte Derecho
-   ld    h, #EB   ;; Bajar a Fila 6
-   ;; Fila 6
-   ld (hl), #E4   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #72   ;; Byte Izquierdo
-   ld    h, #F3   ;; Bajar a Fila 7
-   ;; Fila 7
-   ld (hl), #74   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #E2   ;; Byte Derecho
-   ld    h, #FB   ;; Bajar a Fila 8
-   ;; Fila 8
-   ld (hl), #10   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #80   ;; Byte Izquierdo
-   ld    h, #C3   ;; Volver a Fila 1
-
-   ret
-
-;;============================================================
-;; Dibuja el segundo fotograma de una explosión de 8x8 píxeles
-;; en la posición actual de HL. HL debe estar en la fila 13
-;; de caracteres de pantalla (que empieza en C3C0)
-;; ENTRADAS
-;;    HL: Puntero a la posición donde dibujar el fotograma
-;; MODIFICA
-;;============================================================
-dibujar_fot2_explosion:
-   ;; Fila 1
-   ld (hl), #F8   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #F1   ;; Byte Derecho
-   ld    h, #CB   ;; Bajar a Fila 2
-   ;; Fila 2
-   ld (hl), #FA   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #F5   ;; Byte Izquierdo
-   ld    h, #D3   ;; Bajar a Fila 3
-   ;; Fila 3
-   ld (hl), #D1   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #B8   ;; Byte Derecho
-   ld    h, #DB   ;; Bajar a Fila 4
-   ;; Fila 4
-   ld (hl), #76   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #E6   ;; Byte Izquierdo
-   ld    h, #E3   ;; Bajar a Fila 5
-   ;; Fila 5
-   ld (hl), #E6   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #76   ;; Byte Derecho
-   ld    h, #EB   ;; Bajar a Fila 6
-   ;; Fila 6
-   ld (hl), #B8   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #D1   ;; Byte Izquierdo
-   ld    h, #F3   ;; Bajar a Fila 7
-   ;; Fila 7
-   ld (hl), #F5   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #FA   ;; Byte Derecho
-   ld    h, #FB   ;; Bajar a Fila 8
-   ;; Fila 8
-   ld (hl), #F1   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #F8   ;; Byte Izquierdo
-   ld    h, #C3   ;; Volver a Fila 1
-
-   ret
-
-;;============================================================
-;; Dibuja el tercer fotograma de una explosión de 8x8 píxeles
-;; en la posición actual de HL. HL debe estar en la fila 13
-;; de caracteres de pantalla (que empieza en C3C0)
-;; ENTRADAS
-;;    HL: Puntero a la posición donde dibujar el fotograma
-;; MODIFICA
-;;============================================================
-dibujar_fot3_explosion:
-   ;; Fila 1
-   ld (hl), #77   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #EE   ;; Byte Derecho
-   ld    h, #CB   ;; Bajar a Fila 2
-   ;; Fila 2
-   ld (hl), #55   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #AA   ;; Byte Izquierdo
-   ld    h, #D3   ;; Bajar a Fila 3
-   ;; Fila 3
-   ld (hl), #CC   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #33   ;; Byte Derecho
-   ld    h, #DB   ;; Bajar a Fila 4
-   ;; Fila 4
-   ld (hl), #11   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #88   ;; Byte Izquierdo
-   ld    h, #E3   ;; Bajar a Fila 5
-   ;; Fila 5
-   ld (hl), #88   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #11   ;; Byte Derecho
-   ld    h, #EB   ;; Bajar a Fila 6
-   ;; Fila 6
-   ld (hl), #33   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #CC   ;; Byte Izquierdo
-   ld    h, #F3   ;; Bajar a Fila 7
-   ;; Fila 7
-   ld (hl), #AA   ;; Byte Izquierdo
-   inc  hl        ;; +1
-   ld (hl), #55   ;; Byte Derecho
-   ld    h, #FB   ;; Bajar a Fila 8
-   ;; Fila 8
-   ld (hl), #EE   ;; Byte Derecho
-   dec  hl        ;; -1
-   ld (hl), #77   ;; Byte Izquierdo
-   ld    h, #C3   ;; Volver a Fila 1
 
    ret
