@@ -1,21 +1,10 @@
 org #4000      ;; La generacion de codigo empieza en 4000
 run #4000      ;; Ejecuta en 4000 cuando ensambla
    ;;
-   ;; DIBUJAR RAILES 
+   ;; DIBUJAR RAILES Y BARRILES
    ;;
    call dibujar_railes  ;; Dibuja los Railes
-   
-   ;;
-   ;; DIBUJAR BARRILES (Barril-Espacio-Barril-Espacio)
-   ;;
-   ld hl, #C39A               ;; Primer Barril en C39A
-   ld  b, 19                  ;; 19 grupos Barril-Espacio
-   bucle_barriles:
-      call dibujar_barril     ;; Dibuja un barril
-      inc  hl                 ;; | Siguiente posición de pantalla
-      inc  hl                 ;; |  Dejando un espacio en blanco
-      dec  b                  ;; Un barril menos por dibujar
-   jr nz, bucle_barriles      ;; Si quedan barriles (B!=0), continuar dibujándolos
+   call dibujar_barriles;; Dibuja los Barriles
 
    ;;
    ;; DIBUJAR VAGONETA
@@ -51,16 +40,6 @@ run #4000      ;; Ejecuta en 4000 cuando ensambla
       ld    c, #06      ;; C = número de halts a esperar
       call espera_halt  ;; Esperamos tantos HALT como sea necesario
 
-      ;; Comprobar si se ha pulsado el espacio
-      ;; Y terminar la animación, en su caso
-      ;; OJO! BB1E Modifica A, HL y C
-      ex   de, hl          ;; Salvar HL en DE
-      ld    a, 47          ;; A=47, código de la tecla Espacio
-      call #BB1E           ;; Comprobar si la tecla Espacio está pulsada
-      jr nz, espera_tecla2 ;; Si el Flag Z no está activo, la tecla está
-                           ;; pulsada, por tanto salir.
-      ex   de, hl          ;; Recuperar HL de DE
-
       dec b                ;; Una repetición menos de la animación
    jr nz, bucle_animacion  ;; Si aún quedan frames de la animación, repetir
 
@@ -85,6 +64,27 @@ run #4000      ;; Ejecuta en 4000 cuando ensambla
 
    ;; Comenzar de nuevo 
    jr reinicio
+
+;;============================================================
+;; Dibuja Los barriles al final de la vía
+;; ENTRADAS
+;; MODIFICA
+;;    HL, B
+;;============================================================
+dibujar_barriles:
+   ;;
+   ;; DIBUJAR BARRILES (Barril-Espacio-Barril-Espacio)
+   ;;
+   ld hl, #C39A               ;; Primer Barril en C39A
+   ld  b, 19                  ;; 19 grupos Barril-Espacio
+   bucle_barriles:
+      call dibujar_barril     ;; Dibuja un barril
+      inc  hl                 ;; | Siguiente posición de pantalla
+      inc  hl                 ;; |  Dejando un espacio en blanco
+      dec  b                  ;; Un barril menos por dibujar
+   jr nz, bucle_barriles      ;; Si quedan barriles (B!=0), continuar dibujándolos
+
+   ret
 
 ;;============================================================
 ;; Espera tantos HALT como diga el registro B

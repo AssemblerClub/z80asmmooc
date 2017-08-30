@@ -34,15 +34,17 @@
    - Ejemplo de cómo utilizar CALL para leer el teclado
    - Como saber si una tecla se ha pulsado o no, y decidir en consecuencia
 
-3.P07) RETO: PRESENTACIÓN RETO 3
+3.P07) PRÁCTICA: Variables en ensamblador
+   - Uso de db y dw para introducir valores directamente en memoria
+   - Uso de etiquetas para la dirección de las variables
+   - Leer, modificar y actualizar variables (LD HL y LD A)
+   - Ejemplo: Posición y retardo 
+   - Ojo a la inicialización de las variables.
+
+3.P08) RETO: PRESENTACIÓN RETO 3
    - Dominar el teclado como medio de control
    - Y la toma de decisiones
    - Y el CALL
-
-3.P08) PRÁCTICA: Variables en ensamblador
-   - Cómo crear variables
-   - Cómo leer su contenido y actualizarlas
-   - Inicializar las variables
 
 3.P09) RETO: PRESENTACIÓN RETO 4
    - Toma el control del movimiento con teclado
