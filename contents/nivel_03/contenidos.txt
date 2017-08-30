@@ -11,16 +11,18 @@
 
 3.P03) EJEMPLO: SOLUCIÓN AL RETO 1.1.
    - Explicar cómo funciona el ensamblador de WinAPE
-   - Editar, salvar y ensamblar programas
    - Explicación básica del proceso de ensamblado
    - Comprobación de que se ensambla a memoria
-   - Explicación básica de jr $ y qué significa el $
    - Indicación de que los detalles se explican en un vídeo de teoría
+   - Ejecución automatizada con RUN
 
 3.P04) PRÁCTICA: Ensamblando con WinAPE
    - Creando programas simples con WinAPE y ejecutándolos
-   - Utilidad de poner números en binario directamente (píxeles)
-   - Ejecución automatizada con RUN
+   - Editar, salvar y ensamblar programas
+   - Comentarios
+   - Explicación básica de jr $ y qué significa el $
+   - Explicación básica de qué son las etiquetas
+   - Utilidad de poner números en binario y decimal directamente (píxeles)
    - Errores básicos: No poner los paréntesis a HL, No poner una # o %
 
 3.P05) RETO: PRESENTACIÓN RETO 2
