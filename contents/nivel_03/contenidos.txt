@@ -58,18 +58,26 @@
 == VIDEOS -TEORÍA-
 ========================================================================
 
+REVIEW: Temas a explicar
+ - Firmware, qué es y cómo funciona (dónde está, modos de interrupción IM)
+ - Funciones, Rutinas y parámetros (Parámetros en Registros)
+ - Funcionamiento del teclado (A nivel de chips?) ==> Es interesante?
+ - Condicionales avanzados (DEC, CP) ?? ==> Se usa DEC en prácticas, pero no CP. Explicación flags.
+ - Depuración: Uso de Breakpoints ??    ==> Se usan en prácticas
+
+
 3.T01) TEORIA: Funcionamiento del Ensamblador I
    - El ensamblador es un programa
    - Existen muchos programas ensambladores, y pueden tener distinta sintaxis
    - Procesado de ficheros de Texto
    - Procesa línea por línea y convierte a código máquina
-   - Conforme genera código, lo hace en una posición de memoria
-   - Errores de ensamblado: Revisión
+   - Conforme genera código, lo hace en una posición de memoria (uso de $)
    
 3.T02) TEORIA: Funcionamiento del Ensamblador II
    - Números: Hexadecimal (#), Decimal () y Binario (%)
-   - Símbolos = Etiquetas: Posición de memoria actual (uso de $)
+   - Símbolos = Etiquetas: Posición de memoria actual 
    - Comentarios: Usos e importancia
+   - Errores de ensamblado: Revisión
 
 3.T03) TEORIA: Funcionamiento del Ensamblador III
    - Directivas: Órdenes para el programa ensamblador (cambian su comportamiento)
